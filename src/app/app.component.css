@@ -1,0 +1,222 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgb(26, 188, 156);
+  background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+  background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
+
+.body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: 1;
+  height: 100vh;
+  vertical-align: baseline ;
+}
+
+.homepage{
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('..\assets\Sicurezza-informatica-protezione-ambiente.jpg');
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+/*#region AvatarEffects*/
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+.avatarcontainer {
+  position: absolute;
+  left: 0px;
+  width: 20%;
+  height: 20%;
+  margin-top: 60px;
+  margin-left: 150px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.avatar
+{
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 5px white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+  align-self: start;
+}
+.avatar img { width: 100%; height: auto; }
+/*#endregion AvatarEffects*/
+
+.TopLinks
+{
+  position: absolute;
+  right: 0px;
+  margin-right: 200px;
+  margin-top: 100px;
+  vertical-align: super;
+}
+
+/*#region TopLinksEffects*/
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  font-size: x-large;
+}
+.hover-underline-animation a
+{
+color: #fffbfb;
+text-decoration: none;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation1 {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  font-size: x-large;
+  margin-left: 50px;
+}
+.hover-underline-animation1 a
+{
+color: #fffbfb;
+text-decoration: none;
+}
+
+.hover-underline-animation1:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation1:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/*#endregion TopLinksEffects*/
+
+
+.TitleBarStyle {
+  position: absolute;
+  left: 0px;
+  top: 300px;
+  padding: 10px;
+  border: none;
+  text-align: left;
+}
+.TitleBarStyle p
+{
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: 150px;
+  font-style: italic;
+  font-weight:lighter;
+  font-size:50px;
+  color: white;
+}
+
+.TitleBarStyle h2
+ {
+  display: inline;
+  margin-bottom: 50px;
+  margin-left: 150px;
+  font-style: italic;
+  font-weight:lighter;
+  font-size:50px;
+  color: white;
+}
+
+.TitleBarStyle h3 {
+  display: inline;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 50px;
+  color: white;
+}
+
+
+.TitleBarStyle p
+ {
+  margin-left: 150px;
+  font-style: italic;
+  font-weight:lighter;
+  font-size:50px;
+}
+
+.BottomLinks
+{
+  position: absolute;
+  left: 45%;
+  bottom: 60px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+}
+
+.divider
+{
+  display: block;
+  margin-right: -200%;
+  margin-left: -200%;
+  margin-bottom: 50px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #f8f8f8;
+}
+
