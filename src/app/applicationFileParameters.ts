@@ -1,0 +1,1 @@
+export const githubConfigFilePath = 'assets/githubConfig.json'

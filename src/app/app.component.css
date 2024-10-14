@@ -1,6 +1,7 @@
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   background: rgb(26, 188, 156);
@@ -10,28 +11,13 @@ html {
 }
 
 .body{
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  border: none;
-  line-height: 1;
-  height: 100vh;
-  vertical-align: baseline ;
-}
-
-.homepage{
-  margin: 0;
-  padding: 0;
-  border: none;
-  width: 100%;
-  height: 100%;
   background-size:cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   url('..\assets\Sicurezza-informatica-protezione-ambiente.jpg');
-  min-height: 100%;
-  position: relative;
-  overflow: hidden;
-  font-weight: normal;
 }
 
 /*#region AvatarEffects*/
@@ -51,20 +37,13 @@ html {
 }
 
 .avatarcontainer {
-  position: absolute;
-  left: 0px;
-  width: 20%;
-  height: 20%;
-  margin-top: 60px;
-  margin-left: 150px;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  width: 10rem;
+  height: 10rem;
+  
 }
 
 .avatar
 {
-  width: 150px;
-  height: 150px;
   box-sizing: border-box;
   border: 5px white solid;
   border-radius: 50%;
@@ -72,19 +51,11 @@ html {
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-  align-self: start;
+  align-self: center;
 }
-.avatar img { width: 100%; height: auto; }
+.avatar img { width: 100%; height: auto; 
+  transform: scale(1.25,1.25);}
 /*#endregion AvatarEffects*/
-
-.TopLinks
-{
-  position: absolute;
-  right: 0px;
-  margin-right: 200px;
-  margin-top: 100px;
-  vertical-align: super;
-}
 
 /*#region TopLinksEffects*/
 .hover-underline-animation {
@@ -92,6 +63,7 @@ html {
   position: relative;
   color: #ffffff;
   font-size: x-large;
+  margin: 1rem;
 }
 .hover-underline-animation a
 {
@@ -116,53 +88,10 @@ text-decoration: none;
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
-.hover-underline-animation1 {
-  display: inline-block;
-  position: relative;
-  color: #ffffff;
-  font-size: x-large;
-  margin-left: 50px;
-}
-.hover-underline-animation1 a
-{
-color: #fffbfb;
-text-decoration: none;
-}
-
-.hover-underline-animation1:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #f8f8f8;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation1:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
 /*#endregion TopLinksEffects*/
 
-
-.TitleBarStyle {
-  position: absolute;
-  left: 0px;
-  top: 300px;
-  padding: 10px;
-  border: none;
-  text-align: left;
-}
 .TitleBarStyle p
 {
-  margin-bottom: 50px;
-  margin-top: 50px;
-  margin-left: 150px;
   font-style: italic;
   font-weight:lighter;
   font-size:50px;
@@ -172,8 +101,6 @@ text-decoration: none;
 .TitleBarStyle h2
  {
   display: inline;
-  margin-bottom: 50px;
-  margin-left: 150px;
   font-style: italic;
   font-weight:lighter;
   font-size:50px;
@@ -182,7 +109,6 @@ text-decoration: none;
 
 .TitleBarStyle h3 {
   display: inline;
-  margin-bottom: 50px;
   margin-left: 0px;
   font-style: italic;
   font-weight: lighter;
@@ -190,20 +116,8 @@ text-decoration: none;
   color: white;
 }
 
-
-.TitleBarStyle p
- {
-  margin-left: 150px;
-  font-style: italic;
-  font-weight:lighter;
-  font-size:50px;
-}
-
 .BottomLinks
 {
-  position: absolute;
-  left: 45%;
-  bottom: 60px;
   padding: 10px;
   border: none;
   text-align: center;
@@ -212,11 +126,63 @@ text-decoration: none;
 .divider
 {
   display: block;
-  margin-right: -200%;
-  margin-left: -200%;
   margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
   border-top-width: 2px;
   border-top-style: solid;
   border-top-color: #f8f8f8;
+}
+
+
+
+.header{
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 10rem;
+  margin: 2.5rem;
+}
+
+.carusel-container{
+  flex-grow: 1;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.caruselButton{
+height: 100%;
+width: 10%;
+background: white;
+opacity: 5%;
+>.material-icons{
+  transform: scale(4);
+  color: gray ;
+  opacity: 100% !important;
+}
+}
+.caruselButton:hover{
+  opacity: 20%;
+}
+
+.back{
+  border-bottom-left-radius: 5rem;
+  border-top-left-radius: 5rem; 
+}
+.forward{
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius: 5rem; 
+}
+
+
+.cardContainer{
+  background-color: black;
+  flex-grow: 1;
 }
 
