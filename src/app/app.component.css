@@ -17,7 +17,7 @@ html {
   padding: 0;
   background-size:cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url('..\assets\Sicurezza-informatica-protezione-ambiente.jpg');
+  url('..\assets\mainPage\Sicurezza-informatica-protezione-ambiente.jpg');
 }
 
 /*#region AvatarEffects*/
@@ -90,32 +90,6 @@ text-decoration: none;
 }
 /*#endregion TopLinksEffects*/
 
-.TitleBarStyle p
-{
-  font-style: italic;
-  font-weight:lighter;
-  font-size:50px;
-  color: white;
-}
-
-.TitleBarStyle h2
- {
-  display: inline;
-  font-style: italic;
-  font-weight:lighter;
-  font-size:50px;
-  color: white;
-}
-
-.TitleBarStyle h3 {
-  display: inline;
-  margin-left: 0px;
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 50px;
-  color: white;
-}
-
 .BottomLinks
 {
   padding: 10px;
@@ -150,7 +124,6 @@ text-decoration: none;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 50px;
   margin-right: 50px;
@@ -159,16 +132,21 @@ text-decoration: none;
 .caruselButton{
 height: 100%;
 width: 10%;
-background: white;
-opacity: 5%;
+background: transparent;
+border: none;
+align-content: center;
 >.material-icons{
   transform: scale(4);
   color: gray ;
-  opacity: 100% !important;
 }
 }
 .caruselButton:hover{
-  opacity: 20%;
+  backdrop-filter: blur(80px);
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+.caruselButton:active{
+  backdrop-filter: blur(80px);
+  filter: drop-shadow(0 0 0.75rem blue);
 }
 
 .back{
@@ -179,10 +157,3 @@ opacity: 5%;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 5rem; 
 }
-
-
-.cardContainer{
-  background-color: black;
-  flex-grow: 1;
-}
-

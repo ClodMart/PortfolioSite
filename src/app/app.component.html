@@ -6,43 +6,53 @@
       <div class="header">
           <div id="container" class="avatarcontainer">
             <div class="avatar">
-              <img src="../assets/AvatarMaker.png" class="Avatar"/>
+              <img src="../assets/mainPage/AvatarMaker.png" class="Avatar"/>
             </div>
           </div>
           <div>
-            <p class="hover-underline-animation"> <a href="../assets/MartinoliCV2022.pdf" download="ClaudioMartinoliCV2022">My resume</a></p>
+            <p class="hover-underline-animation"> <a href="../assets/mainPage/" download="ClaudioMartinoliCV2022">My resume</a></p>
           </div>
         </div>
 
 
       <div class="carusel-container">
-        <button aria-label="Previous Slide" class="caruselButton back">
+        <button aria-label="Previous Slide" class="caruselButton back"  (click)="onNavigate('left')">
           <i class="material-icons">arrow_back_ios</i>
         </button>
-        <div class="cardContainer">
-          <ng-container *ngFor="let project of configsService.GitData().Projects; trackBy: trackByFn">
+        <div class="fullScreenContainer" >
+          <div class="cardContainer" *ngIf="0==selectedCard" [@slideInOut]="{
+            value: '',
+            params: {
+              start: slideDirection === 'right' ? '+' : '-',
+              end: slideDirection === 'right' ? '-' : '+'
+            }
+          }">
+          <app-welcome-card class="cardContent"></app-welcome-card>
+          </div>
+          <ng-container *ngFor="let info of ListData().Cards; index as i; trackBy: trackByFn" >
+            <div class="cardContainer" [ngSwitch]="info.Type" *ngIf="i+1==selectedCard" [@slideInOut]="{
+              value: '',
+              params: {
+                start: slideDirection === 'right' ? '+' : '-',
+                end: slideDirection === 'right' ? '-' : '+'
+              }
+            }">
+              <ng-template [ngSwitchCase]="personalInfoTypes.Presentation"  >
+                <app-presentation-card class="cardContent" [Card]="info"></app-presentation-card>
+              </ng-template>
+              <ng-template [ngSwitchCase]="personalInfoTypes.Project">
+                  <app-project-card class="cardContent"></app-project-card>
+              </ng-template>
+            </div>
           </ng-container>
         </div>
-        <button aria-label="Forward Slide" class="caruselButton forward">
+        <button aria-label="Forward Slide" class="caruselButton forward" (click)="onNavigate('right')">
           <i class="material-icons">arrow_forward_ios</i>
         </button>
-        <!-- <div class="TitleBarStyle">
-          <h2>Welcome</h2><h3 [@slideUpDown]="TextStatus"> {{NamesArray[currentIndex]}}</h3><h3> !</h3>
-          <p>I am Claudio Martinoli;<br>
-            Solution designer,<br>
-            full stack developer and SQL expert.</p>
-        </div> -->
       </div>
-      <!-- <div class="TitleBarStyle">
-        <h2>Welcome</h2><h3 [@slideUpDown]="TextStatus"> {{NamesArray[currentIndex]}}</h3><h3> !</h3>
-        <p>I am Claudio Martinoli;<br>
-          Solution designer,<br>
-          full stack developer and SQL expert.</p>
-      </div> -->
-
 
       <div class="BottomLinks">
-        <mat-divider class="divider" ></mat-divider>
+        <mat-divider class="divider"></mat-divider>
 
         <p class="hover-underline-animation">Linkedin</p>
         <p class="hover-underline-animation1">GitHub</p>

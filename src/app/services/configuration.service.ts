@@ -1,17 +1,23 @@
 import { HttpClient } from "@angular/common/http";
-import { Injectable, signal } from "@angular/core";
-import { Observable, Subject, take, throwError } from "rxjs";
-import { githubConfigFilePath } from "../applicationFileParameters";
+import { Injectable, OnDestroy, OnInit, signal } from "@angular/core";
+import { Observable, Subject, Subscription, take, throwError } from "rxjs";
+import { ConfigFilePath} from "./applicationFileParameters";
+import { PersonalInfoTypes } from "../enums/personal-info-types.enum";
 
-export interface GithubProject{
-  ProjectName:string,
-    URL: string,
-    PreviewImage: string,
-    Description: string
+
+export interface Card{
+    TabName:string,
+    Title?: string
+    SubTitle?: string,
+    Description?: string,    
+    URL?: string,
+    Image?: string
+    Items?: string[]
+    Type: PersonalInfoTypes
 }
 
-export interface GithubConfig{
-  Projects: GithubProject[];
+export interface appConfig{
+  Cards: Card[];
 }
 
 export type ResponseDataType = 'json'|'blob'|'text'|'arraybuffer'| undefined
@@ -21,15 +27,12 @@ export type ResponseDataType = 'json'|'blob'|'text'|'arraybuffer'| undefined
 })
 export class ConfigsService {
 
-  private _gitData: GithubConfig = {Projects: []};
-  public GitData = signal(this._gitData);
-
   constructor(private httpClient: HttpClient) { 
-    this.GetApiConfig().pipe(take(1)).subscribe(GitConf=>this.GitData.set(GitConf));
+
   }
 
-  public GetApiConfig(): Observable<GithubConfig>{
-    return this.httpClient.get<GithubConfig>(githubConfigFilePath);
+  public GetAppConfig(): Observable<appConfig>{
+    return this.httpClient.get<appConfig>(ConfigFilePath);
   }
 
   // public GetAppConfig(): Observable<IAppConfig>{

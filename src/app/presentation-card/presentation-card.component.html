@@ -1,0 +1,16 @@
+
+    <div *ngIf="Card.Title" class="titleContainer">
+        <p>{{Card.Title}}</p>
+    </div>
+    <div *ngIf="Card.SubTitle" class="subTitleContainer">
+        <p>{{Card.SubTitle}}</p>
+    </div>
+    <div class="mainContainer">
+        <div *ngIf="Card.Description" class="descContainer">
+            {{Card.Description}}
+        </div>
+        <div class="skillsContainer">
+            <p>Skills Placeholder</p>
+        </div>
+    </div>
+
