@@ -2,7 +2,7 @@ import { Component, computed, effect, OnDestroy, OnInit, Signal, signal, Writabl
 import { slideInOut } from './animations';
 import { appConfig, ConfigsService } from './services/configuration.service';
 import { Subscription, take } from 'rxjs';
-import { PersonalInfoTypes } from './enums/personal-info-types.enum';
+import { CardTypes } from './enums/card-types.enum';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent implements OnDestroy{
 
   intervalId: any;
   public selectedCard= 0;
-  public personalInfoTypes = PersonalInfoTypes
+  public personalInfoTypes = CardTypes
   public slideDirection: "left"|"right" = "right";
 
   private appData: appConfig = {

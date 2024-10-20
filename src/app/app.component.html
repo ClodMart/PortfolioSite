@@ -41,7 +41,7 @@
                 <app-presentation-card class="cardContent" [Card]="info"></app-presentation-card>
               </ng-template>
               <ng-template [ngSwitchCase]="personalInfoTypes.Project">
-                  <app-project-card class="cardContent"></app-project-card>
+                  <app-project-card class="cardContent" [Card]="info"></app-project-card>
               </ng-template>
             </div>
           </ng-container>
@@ -55,7 +55,7 @@
         <mat-divider class="divider"></mat-divider>
 
         <p class="hover-underline-animation">Linkedin</p>
-        <p class="hover-underline-animation1">GitHub</p>
+        <!-- <p class="hover-underline-animation1">GitHub</p> -->
       </div>
   </body>
 </html>

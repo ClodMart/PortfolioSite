@@ -1,47 +1,7 @@
-.titleContainer{
-    text-align: center;
-    height: 10%;
-    width: 100%;
-    margin-bottom: 1rem;
-    >p{
-        font-style: italic;
-        font-weight:lighter;
-        font-size:50px;
-        color: white;
-        line-height: 2rem;
-      }
-}
-.subTitleContainer{
-    text-align: center;
-    height: 10%;
-    width: 100%;
-    >p{
-        font-style: italic;
-        font-weight:lighter;
-        font-size:25px;
-        color: white;
-        line-height: 2rem;
-      }
-}
-
-.descContainer{
-    text-align: center;
-    margin-right: 1rem;
-    width: 50rem;
-    height: 20rem;
-        font-style: italic;
-        font-weight:lighter;
-        font-size:25px;
-        color: white;
-        line-height: 2rem;
-        text-wrap: wrap;
-}
-
-.skillsContainer{
+.skillsTitleContainer{
     text-align: center;
     width: 50rem;
     height: 20rem;
-    background-color: green;
     >p{
         font-style: italic;
         font-weight:lighter;

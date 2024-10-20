@@ -2,18 +2,28 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable, OnDestroy, OnInit, signal } from "@angular/core";
 import { Observable, Subject, Subscription, take, throwError } from "rxjs";
 import { ConfigFilePath} from "./applicationFileParameters";
-import { PersonalInfoTypes } from "../enums/personal-info-types.enum";
+import { CardTypes } from "../enums/card-types.enum";
+import { CardItemTypes } from "../enums/card-item-types.enum";
 
 
 export interface Card{
     TabName:string,
     Title?: string
     SubTitle?: string,
-    Description?: string,    
-    URL?: string,
-    Image?: string
-    Items?: string[]
-    Type: PersonalInfoTypes
+    Description?: string,
+    Items?: CardItem[]
+    Type: CardTypes
+}
+
+export interface CardItem{
+  Label: string,
+  Description?: string,
+  Color?: string,
+  Level?: number,
+  URL?: string,
+  Image?: string,
+  Type: CardItemTypes,
+  SubItems?: CardItem[]
 }
 
 export interface appConfig{

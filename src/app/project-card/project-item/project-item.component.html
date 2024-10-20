@@ -1,0 +1,36 @@
+<div class="projectsContainer">
+    <div *ngIf="items[selected()] && !changing" class="projectsTitleContainer" [@slideInOutFixed]="{
+        value: '',
+        params: {
+          start: '+'
+        }
+      }">
+            <p>{{items[selected()].Label}}</p> 
+            <p>{{items[selected()].Description}}</p>
+            <mat-divider class="divider"></mat-divider>
+        <div>
+            <div class="skillsContainer">
+                <ng-container *ngFor="let item of items[selected()].SubItems; index as i; trackBy: trackByFn" [ngSwitch]="item.Type">
+                    <app-skill-item *ngSwitchCase="itemTypes.Skill" [item]="item"></app-skill-item>
+                </ng-container>
+            </div>
+                <button class="anim-bg-gradient">Repository</button>        
+        </div>
+    </div>
+
+    <div #ProjectSelector class="projectsImageContainer" (wheel)="changeSelected($event)" (click)="changeSelectedClick($event)">
+    <ng-container *ngFor="let item of items; index as i; trackBy: trackByFn">
+        <img #project *ngIf="item && i>=selected()" [src]="'../assets/projectImages/' + (i==selected() ? item.Image : 'emptyCard.jpg')" class="image" [@slideUpInOut]="{
+            value: '',
+            params: {
+              start : '+',
+              end:'+'
+            }
+          }"
+          [style.top]="23-(2*i)+'%'"
+          [style.left]="50+i+'%'"
+          [style.z-index]="items.length - i"
+          />
+    </ng-container>
+    </div>
+</div>

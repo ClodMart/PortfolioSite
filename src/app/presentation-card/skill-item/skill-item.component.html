@@ -1,0 +1,4 @@
+<div *ngIf="item.Color" class="itemContainer" [ngStyle]="style">
+<img *ngIf="item.Image" [src]="'../assets/skillIcons/' + item.Image" class="icon"/>
+<h1 class="text">{{item.Label}}</h1>
+</div>

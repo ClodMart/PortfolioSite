@@ -57,55 +57,13 @@ html {
   transform: scale(1.25,1.25);}
 /*#endregion AvatarEffects*/
 
-/*#region TopLinksEffects*/
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #ffffff;
-  font-size: x-large;
-  margin: 1rem;
-}
-.hover-underline-animation a
-{
-color: #fffbfb;
-text-decoration: none;
-}
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #f8f8f8;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-/*#endregion TopLinksEffects*/
 
 .BottomLinks
 {
   padding: 10px;
   border: none;
   text-align: center;
-}
-
-.divider
-{
-  display: block;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-top-color: #f8f8f8;
 }
 
 

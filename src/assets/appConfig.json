@@ -1,16 +1,61 @@
 {
-"Cards":[{
-    "TabName":"Presentation",
-    "Title": "My History",
-    "Description": "I’m 27, in the IT consultancy field since 2019. During the first years of my career I worked on two projects for some of the most important clients for my company (Eniservizi and Kone elevators). In 2022 I chose to work for a production company and I got hired in Axiotek where I followed design, planning and development of the software embedded in the new generation of durometers. Since a web interface was needed, I started learning Angular to develop a web app. In order to get better with those new skills I decided to find a position as full stack developer, discovering Akkodis where I am currently employed.",
-    "Type": "Presentation"
-},
-{
-    "TabName":"Projects",
-    "Title": "Test ProjectName",
-    "SubTitle": "Test Project Subtitle",
-    "Description": "Test Project Description",
-    "Type": "Project",
-    "URL":"testUrl"
-}]
+    "Cards":[{
+        "TabName":"Presentation",
+        "Title": "My History",
+        "Description": "I’m 27, in the IT consultancy field since 2019. During the first years of my career I worked on two projects for some of the most important clients for my company (Eniservizi and Kone elevators). In 2022 I chose to work for a production company and I got hired in Axiotek where I followed design, planning and development of the software embedded in the new generation of durometers. Since a web interface was needed, I started learning Angular to develop a web app. In order to get better with those new skills I decided to find a position as full stack developer, discovering Akkodis where I am currently employed.",
+        "Type": "Presentation",
+        "Items": [{
+            "Type": "Skill",
+            "Label": "CSharp",
+            "Color": "purple",
+            "Image": "cSharp.svg"        
+        }]
+    },
+    {
+        "TabName":"Projects",
+        "Title": "My Projects",
+        "Type": "Project",
+        "Items": [        {
+            "Type": "Project",
+            "Label": "This Site",
+            "Description": "Using a configuration file most informations can be changed.",
+            "Color": "green",
+            "Image":"PortfolioSite.png",
+            "Url":"www.testUrl.com" ,  
+            "SubItems": [{
+                "Type": "Skill",
+                "Label": "Angular",
+                "Color": "blue",
+                "Image": "Angular.svg"        
+            }]   
+        },
+        {
+            "Type": "Project",
+            "Label": "PhotoOrganizer",
+            "Description": "Utility software that is able to organize photos based on metadata selected in the settings page.",
+            "Color": "green",
+            "Image":"PhotoOrganizer.png",
+            "Url":"www.testUrl.com" ,  
+            "SubItems": [{
+                "Type": "Skill",
+                "Label": "CSharp",
+                "Color": "purple",
+                "Image": "cSharp.svg"        
+            }]   
+        },
+        {
+            "Type": "Project",
+            "Label": "PhotoOrganizer-2",
+            "Description": "Utility software that is able to organize photos based on metadata selected in the settings page.",
+            "Color": "green",
+            "Image":"PhotoOrganizer.png",
+            "Url":"www.testUrl.com" ,  
+            "SubItems": [{
+                "Type": "Skill",
+                "Label": "CSharp",
+                "Color": "purple",
+                "Image": "cSharp.svg"        
+            }]   
+        }]
+    }]
 }

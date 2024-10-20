@@ -9,8 +9,13 @@
         <div *ngIf="Card.Description" class="descContainer">
             {{Card.Description}}
         </div>
+        <div *ngIf="Card.Items" class="skillsTitleContainer">
+            <p>My Skills</p>
         <div class="skillsContainer">
-            <p>Skills Placeholder</p>
-        </div>
+            <ng-container *ngFor="let item of Card.Items; index as i; trackBy: trackByFn" [ngSwitch]="item.Type">
+                <app-skill-item *ngSwitchCase="itemTypes.Skill" [item]="item"></app-skill-item>
+            </ng-container>
+        </div>        
+    </div>
     </div>
 

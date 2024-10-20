@@ -19,7 +19,39 @@ export const slideInOut = trigger("slideInOut", [
     transition(":leave", [
         style({ transform: "translateX(0)" }),
         animate("0.3s ease-out", keyframes([
-          style({ transform: "translateX({{end}}100%)" }),
+          style({ transform: "translateX({{end}}100%)"}),
+        ]))
+    ])
+  ])
+
+  export const slideInOutFixed = trigger("slideInOutFixed", [
+    transition(":enter", [
+        style({transform: "translateX({{start}}50%)", opacity: "0%" }),
+        animate("0.3s ease-out", keyframes([
+          style({ transform: "translateX(0)", opacity: "100%" })
+        ])
+      )
+    ]),
+    transition(":leave", [
+        style({ transform: "translateX(0)", opacity: "100%"  }),
+        animate("0.3s ease-out", keyframes([
+          style({ transform: "translateX({{start}}100%)", opacity: "0%"  }),
+        ]))
+    ])
+  ])
+
+  export const slideUpInOut = trigger("slideUpInOut", [
+    transition(":enter", [
+        style({transform: "translateY({{end}}100%)" }),
+        animate("0.3s ease-out", keyframes([
+          style({ transform: "translateY(0)" })
+        ])
+      )
+    ]),
+    transition(":leave", [
+        style({ transform: "translateY(0)" }),
+        animate("0.3s ease-out", keyframes([
+          style({ transform: "translateY({{end}}100%)" }),
         ]))
     ])
   ])
