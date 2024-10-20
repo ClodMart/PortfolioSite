@@ -63,4 +63,10 @@ export class ProjectItemComponent {
      }
      this.changing = false;
    }
+
+public navigateToPage() {
+    if(this.items[this.selected()]){
+      window.open(this.items[this.selected()].Url, "_blank");
+    }
+    }
 }

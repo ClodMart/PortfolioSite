@@ -21,7 +21,7 @@
             "Description": "Using a configuration file most informations can be changed.",
             "Color": "green",
             "Image":"PortfolioSite.png",
-            "Url":"www.testUrl.com" ,  
+            "Url":"https://github.com/ClodMart/PortfolioSite" ,  
             "SubItems": [{
                 "Type": "Skill",
                 "Label": "Angular",
@@ -35,7 +35,7 @@
             "Description": "Utility software that is able to organize photos based on metadata selected in the settings page.",
             "Color": "green",
             "Image":"PhotoOrganizer.png",
-            "Url":"www.testUrl.com" ,  
+            "Url":"https://github.com/ClodMart/PhotoOrganizer" ,  
             "SubItems": [{
                 "Type": "Skill",
                 "Label": "CSharp",

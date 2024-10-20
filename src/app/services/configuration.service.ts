@@ -20,7 +20,7 @@ export interface CardItem{
   Description?: string,
   Color?: string,
   Level?: number,
-  URL?: string,
+  Url?: string,
   Image?: string,
   Type: CardItemTypes,
   SubItems?: CardItem[]
