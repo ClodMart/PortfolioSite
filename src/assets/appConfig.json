@@ -1,4 +1,6 @@
-{
+{   "LinkedinUrl":"https://www.linkedin.com/in/claudio-martinoli",
+    "Curriculum":"MartinoliCV2022.pdf",
+    "AvatarImg":"AvatarMaker.png",
     "Cards":[{
         "TabName":"Presentation",
         "Title": "My History",
@@ -25,7 +27,7 @@
             "SubItems": [{
                 "Type": "Skill",
                 "Label": "Angular",
-                "Color": "blue",
+                "Color": "cadetblue",
                 "Image": "Angular.svg"        
             }]   
         },
@@ -41,12 +43,24 @@
                 "Label": "CSharp",
                 "Color": "purple",
                 "Image": "cSharp.svg"        
+            },
+            {
+                "Type": "Skill",
+                "Label": "WPF",
+                "Color": "darkviolet", 
+                "Image":"wpf.svg" 
+            },
+            {
+                "Type": "Skill",
+                "Label": "xml",
+                "Color": "green", 
+                "Image":"xml.svg" 
             }]   
         },
         {
             "Type": "Project",
-            "Label": "PhotoOrganizer-2",
-            "Description": "Utility software that is able to organize photos based on metadata selected in the settings page.",
+            "Label": "Storage Manager",
+            "Description": "A storage manager destinated to resturant or pubs.\n The software manages items that are inserted in the storage and products that are sold by the activity, calculating costs, prices and net gains highlighting if prices are increasing or decreasing based on the data inserted by the user. \nIt can also generate xls files containing orders needed in order to fill the storage based on settings inserted by the user. \nThe software is cross platform thanks to MAUI",
             "Color": "green",
             "Image":"PhotoOrganizer.png",
             "Url":"www.testUrl.com" ,  
@@ -55,7 +69,20 @@
                 "Label": "CSharp",
                 "Color": "purple",
                 "Image": "cSharp.svg"        
-            }]   
+            },
+            {
+                "Type": "Skill",
+                "Label": ".NET MAUI",
+                "Color": "blue",
+                "Image": "maui.svg"        
+            },
+            {
+                "Type": "Skill",
+                "Label": "SQL",
+                "Color": "darkgray",
+                "Image": "maui.svg"        
+            }
+        ]   
         }]
     }]
 }

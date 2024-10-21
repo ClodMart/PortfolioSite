@@ -6,25 +6,25 @@
       <div class="header">
           <div id="container" class="avatarcontainer">
             <div class="avatar">
-              <img src="../assets/mainPage/AvatarMaker.png" class="Avatar"/>
+              <img [src]="'../assets/mainPage/'+ListData().AvatarImg" class="Avatar"/>
             </div>
           </div>
           <div>
-            <p class="hover-underline-animation"> <a href="../assets/mainPage/" download="ClaudioMartinoliCV2022">My resume</a></p>
+            <p class="hover-underline-animation"> <a href="../assets/mainPage/" [download]="ListData().Curriculum">My resume</a></p>
           </div>
         </div>
 
 
       <div class="carusel-container">
-        <button aria-label="Previous Slide" class="caruselButton back"  (click)="onNavigate('left')">
+        <button aria-label="Previous Slide" class="caruselButton back"  (click)="onNavigate(slideDirections.left)">
           <i class="material-icons">arrow_back_ios</i>
         </button>
         <div class="fullScreenContainer" >
           <div class="cardContainer" *ngIf="0==selectedCard" [@slideInOut]="{
             value: '',
             params: {
-              start: slideDirection === 'right' ? '+' : '-',
-              end: slideDirection === 'right' ? '-' : '+'
+              start: slideDirection() === slideDirections.right ? '+' : '-',
+              end: slideDirection() === slideDirections.right ? '-' : '+'
             }
           }">
           <app-welcome-card class="cardContent"></app-welcome-card>
@@ -33,8 +33,8 @@
             <div class="cardContainer" [ngSwitch]="info.Type" *ngIf="i+1==selectedCard" [@slideInOut]="{
               value: '',
               params: {
-                start: slideDirection === 'right' ? '+' : '-',
-                end: slideDirection === 'right' ? '-' : '+'
+                start: slideDirection() === slideDirections.right ? '+' : '-',
+                end: slideDirection() === slideDirections.right ? '-' : '+'
               }
             }">
               <ng-template [ngSwitchCase]="personalInfoTypes.Presentation"  >
@@ -46,7 +46,7 @@
             </div>
           </ng-container>
         </div>
-        <button aria-label="Forward Slide" class="caruselButton forward" (click)="onNavigate('right')">
+        <button aria-label="Forward Slide" class="caruselButton forward" (click)="onNavigate(slideDirections.right)">
           <i class="material-icons">arrow_forward_ios</i>
         </button>
       </div>
@@ -54,7 +54,7 @@
       <div class="BottomLinks">
         <mat-divider class="divider"></mat-divider>
 
-        <p class="hover-underline-animation">Linkedin</p>
+        <p class="hover-underline-animation" (click)="OpenLinkedin()">Linkedin</p>
         <!-- <p class="hover-underline-animation1">GitHub</p> -->
       </div>
   </body>

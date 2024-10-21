@@ -16,10 +16,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   scrollbar-width: none;
   width: 100%;
   margin: 1rem;
-  border: solid, 5px, black;
-  border-radius: 2rem;
   backdrop-filter: blur(50px);
-  >.cardContainer{    
+  >.cardContainer{   
+    height: 59vh;
+    border: solid, 5px, black;
+    border-radius: 2rem; 
     display: flex;
     flex-grow: 1;
     overflow: hidden;

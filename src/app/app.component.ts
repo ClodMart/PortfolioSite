@@ -3,6 +3,7 @@ import { slideInOut } from './animations';
 import { appConfig, ConfigsService } from './services/configuration.service';
 import { Subscription, take } from 'rxjs';
 import { CardTypes } from './enums/card-types.enum';
+import { horizontalDirections } from './enums/slide-directions.enum';
 
 
 @Component({
@@ -15,14 +16,19 @@ import { CardTypes } from './enums/card-types.enum';
 })
 
 export class AppComponent implements OnDestroy{
+
   title = 'PortfolioSite';
 
   intervalId: any;
   public selectedCard= 0;
   public personalInfoTypes = CardTypes
-  public slideDirection: "left"|"right" = "right";
+  public slideDirection = signal(horizontalDirections.right);
+  public slideDirections = horizontalDirections;
 
   private appData: appConfig = {
+    LinkedinUrl:"",
+    Curriculum:"",
+    AvatarImg:"",
     Cards:[]
   };
   public ListData: WritableSignal<appConfig> = signal(this.appData);
@@ -49,23 +55,31 @@ export class AppComponent implements OnDestroy{
     return item;
  }
 
- public onNavigate(dir: 'left' | 'right'): void {
-  this.slideDirection = dir;
+ public async onNavigate(dir: horizontalDirections) {
+  this.slideDirection.set(dir);
+  var tempSelected =  this.selectedCard;
+  await new Promise(f => setTimeout(f, 1));
+  this.selectedCard = -1;
+  await new Promise(f => setTimeout(f, 300));
     switch (dir) {
       case 'left':
-        if (this.selectedCard === 0) {
+        if (tempSelected === 0) {
           this.selectedCard = this.ListData().Cards.length;
         } else {
-          this.selectedCard = this.selectedCard - 1;
+          this.selectedCard = tempSelected -1;
         }
         break;
       case 'right':
-        if (this.selectedCard === this.ListData().Cards.length) {
+        if (tempSelected === this.ListData().Cards.length) {
           this.selectedCard = 0;
         } else {
-          this.selectedCard = this.selectedCard + 1;
+          this.selectedCard = tempSelected + 1;
         }
     }
+  }
+  
+  OpenLinkedin() {
+    window.open(this.appData.LinkedinUrl, "_blank");
   }
 }
 

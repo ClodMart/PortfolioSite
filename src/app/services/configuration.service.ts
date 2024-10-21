@@ -27,6 +27,9 @@ export interface CardItem{
 }
 
 export interface appConfig{
+  LinkedinUrl: string,
+  Curriculum: string,
+  AvatarImg: string,
   Cards: Card[];
 }
 
