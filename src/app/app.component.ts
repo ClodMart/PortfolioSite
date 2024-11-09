@@ -77,9 +77,11 @@ export class AppComponent implements OnDestroy{
         }
     }
   }
-  
-  OpenLinkedin() {
-    window.open(this.appData.LinkedinUrl, "_blank");
+
+  public OpenLinkedin() {
+    this.configsService.GetAppConfig().pipe(take(1)).subscribe(x=>{
+      window.open(x.LinkedinUrl, "_blank");
+    });
   }
 }
 

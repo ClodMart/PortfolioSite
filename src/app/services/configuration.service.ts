@@ -47,7 +47,6 @@ export class ConfigsService {
   public GetAppConfig(): Observable<appConfig>{
     return this.httpClient.get<appConfig>(ConfigFilePath);
   }
-
   // public GetAppConfig(): Observable<IAppConfig>{
   //   return this.httpClient.get<IAppConfig>(systemConfigFilePath);
   // }

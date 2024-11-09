@@ -31,7 +31,6 @@ export class ProjectItemComponent {
 
  async changeSelected(event: WheelEvent) {
    this.changing = true;
-   console.log(event);
    if (event.deltaY < 0 && this.selected()>0)
     {
      await new Promise(f => setTimeout(f, 300));
@@ -49,7 +48,6 @@ export class ProjectItemComponent {
 
   async changeSelectedClick(event: MouseEvent) {
     this.changing = true;
-    console.log(event);
     if (this.selected() < this.items.length-1)
      {
        await new Promise(f => setTimeout(f, 300));

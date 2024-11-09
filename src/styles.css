@@ -18,7 +18,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: 1rem;
   backdrop-filter: blur(50px);
   >.cardContainer{   
-    height: 59vh;
     border: solid, 5px, black;
     border-radius: 2rem; 
     display: flex;

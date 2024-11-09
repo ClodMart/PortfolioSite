@@ -9,4 +9,9 @@
         color: white;
         line-height: 2rem;
       }
+      .skillsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: center;
+      }
 }

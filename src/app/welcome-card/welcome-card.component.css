@@ -1,4 +1,7 @@
 .TitleBarStyle{
+    position: relative;
+    top:25%;
+    left: 25%;
     height: 25rem;
     width: 95rem;
 }

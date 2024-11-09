@@ -2,24 +2,27 @@
     display: flex;
     border: solid 1px black;
     max-width: fit-content;
-    max-height: fit-content;
     flex-direction: row;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
     border-radius: 2rem;
-    min-width: 50px;
+    min-height: 40px;
+    min-width: 150px;
+    padding: 5px;
+    margin: 10px
 }
 
 .icon{
-    margin: 2px;
     width: auto;
-    height: 25px;
+    max-height: 40px;
+    margin-left: 1rem;
 }
 
 .text{
     color: white;
-    font-size: small;
+    font-size: 1.5vh;
+    font-size-adjust: auto;
     text-align: center;
     line-height: 25px;
     height: 25px;

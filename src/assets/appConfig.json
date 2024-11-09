@@ -1,4 +1,4 @@
-{   "LinkedinUrl":"https://www.linkedin.com/in/claudio-martinoli",
+{   "LinkedinUrl":"https://www.linkedin.com/in/claudio-martinoli-132393211/",
     "Curriculum":"MartinoliCV2022.pdf",
     "AvatarImg":"AvatarMaker.png",
     "Cards":[{
@@ -11,7 +11,86 @@
             "Label": "CSharp",
             "Color": "purple",
             "Image": "cSharp.svg"        
-        }]
+        },
+        {
+            "Type": "Skill",
+            "Label": "Angular",
+            "Color": "cadetblue",
+            "Image": "Angular.svg"        
+        },
+        {
+            "Type": "Skill",
+            "Label": "MAUI",
+            "Color": "rebeccapurple",
+            "Image": "maui.svg"        
+        },
+        {
+            "Type": "Skill",
+            "Label": "SQL",
+            "Color": "darkolivegreen",
+            "Image": "sql.svg"        
+        },
+        {
+            "Type": "Skill",
+            "Label": "ORACLE",
+            "Color": "darkcyan",
+            "Image": "oracle.svg"        
+        },
+        {
+            "Type": "Skill",
+            "Label": "html",
+            "Color": "blue",
+            "Image": "html.svg"        
+        },
+        {
+            "Type": "Skill",
+            "Label": "css",
+            "Color": "darkorange",
+            "Image": "css.svg"        
+        },
+        {
+            "Type": "Skill",
+            "Label": "WPF",
+            "Color": "darkviolet", 
+            "Image":"wpf.svg" 
+        },
+        {
+            "Type": "Skill",
+            "Label": "xaml",
+            "Color": "darkslategrey", 
+            "Image":"xaml.svg" 
+        },
+        {
+            "Type": "Skill",
+            "Label": "Json",
+            "Color": "darkgreen", 
+            "Image":"json.svg" 
+        },
+        {
+            "Type": "Skill",
+            "Label": "JavaScript",
+            "Color": "darkslategrey", 
+            "Image":"javascript.svg" 
+        },
+        {
+            "Type": "Skill",
+            "Label": "TypeScript",
+            "Color": "darkcyan", 
+            "Image":"typescript.svg" 
+        },
+        {
+            "Type": "Skill",
+            "Label": "Entity Fw",
+            "Color": "darkorange", 
+            "Image":"entity.svg" 
+        },
+        {
+            "Type": "Skill",
+            "Label": "xUnit",
+            "Color": "darkcyan",
+            "Image": ""        
+        }
+    ]
     },
     {
         "TabName":"Projects",
@@ -20,7 +99,7 @@
         "Items": [        {
             "Type": "Project",
             "Label": "This Site",
-            "Description": "Using a configuration file most informations can be changed.",
+            "Description": "This site is completely built using angular faramework. Some animations and reactive components are used to grant responsiveness and ease of use. Using a json configuration file most informations can be changed.",
             "Color": "green",
             "Image":"PortfolioSite.png",
             "Url":"https://github.com/ClodMart/PortfolioSite" ,  
@@ -29,12 +108,37 @@
                 "Label": "Angular",
                 "Color": "cadetblue",
                 "Image": "Angular.svg"        
-            }]   
+            },        
+            {
+                "Type": "Skill",
+                "Label": "TypeScript",
+                "Color": "darkcyan", 
+                "Image":"typescript.svg" 
+            },       
+            {
+                "Type": "Skill",
+                "Label": "html",
+                "Color": "blue",
+                "Image": "html.svg"        
+            },
+            {
+                "Type": "Skill",
+                "Label": "css",
+                "Color": "darkorange",
+                "Image": "css.svg"        
+            },        
+            {
+                "Type": "Skill",
+                "Label": "Json",
+                "Color": "darkgreen", 
+                "Image":"json.svg" 
+            }
+        ]   
         },
         {
             "Type": "Project",
             "Label": "PhotoOrganizer",
-            "Description": "Utility software that is able to organize photos based on metadata selected in the settings page.",
+            "Description": "Utility software that is able to organize photos based on metadata selected in the settings page. Settings are saved on a local json file for ease of use.",
             "Color": "green",
             "Image":"PhotoOrganizer.png",
             "Url":"https://github.com/ClodMart/PhotoOrganizer" ,  
@@ -52,18 +156,24 @@
             },
             {
                 "Type": "Skill",
-                "Label": "xml",
+                "Label": "xaml",
                 "Color": "green", 
-                "Image":"xml.svg" 
+                "Image":"xaml.svg" 
+            },
+            {
+                "Type": "Skill",
+                "Label": "Json",
+                "Color": "darkgreen", 
+                "Image":"json.svg" 
             }]   
         },
         {
             "Type": "Project",
             "Label": "Storage Manager",
-            "Description": "A storage manager destinated to resturant or pubs.\n The software manages items that are inserted in the storage and products that are sold by the activity, calculating costs, prices and net gains highlighting if prices are increasing or decreasing based on the data inserted by the user. \nIt can also generate xls files containing orders needed in order to fill the storage based on settings inserted by the user. \nThe software is cross platform thanks to MAUI",
+            "Description": "A storage manager destinated to resturant or pubs. The software manages items that are inserted in the storage and products that are sold by the activity, calculating costs, prices and net gains highlighting if prices are increasing or decreasing based on the data inserted by the user. It can also generate xls files containing orders needed in order to fill the storage based on settings inserted by the user. The software is cross platform thanks to MAUI and adapts to device theme colors",
             "Color": "green",
-            "Image":"PhotoOrganizer.png",
-            "Url":"www.testUrl.com" ,  
+            "Image":"StorageManager.png",
+            "Url":"https://github.com/ClodMart/StorageManager" ,  
             "SubItems": [{
                 "Type": "Skill",
                 "Label": "CSharp",
@@ -72,15 +182,55 @@
             },
             {
                 "Type": "Skill",
-                "Label": ".NET MAUI",
-                "Color": "blue",
+                "Label": "MAUI",
+                "Color": "rebeccapurple",
                 "Image": "maui.svg"        
             },
             {
                 "Type": "Skill",
                 "Label": "SQL",
-                "Color": "darkgray",
-                "Image": "maui.svg"        
+                "Color": "darkred",
+                "Image": "sql.svg"        
+            },
+            {
+                "Type": "Skill",
+                "Label": "Entity Fw",
+                "Color": "darkorange", 
+                "Image":"entity.svg" 
+            },
+            {
+                "Type": "Skill",
+                "Label": "Json",
+                "Color": "darkgreen", 
+                "Image":"json.svg" 
+            }
+        ]   
+        },
+        {
+            "Type": "Project",
+            "Label": "PokedexAPI",
+            "Description": "A funny coding challenge done for a coding test. Created a web api calling external services to translate pokemon description with funny translations. The api middleware contains a global error handling class and the project is divided in 3 layers: data, business logic and api. All components are tested using xUnit.",
+            "Color": "green",
+            "Image":"PokedexAPI.png",
+            "Url":"https://github.com/ClodMart/PokedexAPI" ,  
+            "SubItems": [        
+            {
+                "Type": "Skill",
+                "Label": "Json",
+                "Color": "darkgreen", 
+                "Image":"json.svg" 
+            },
+            {
+                "Type": "Skill",
+                "Label": "CSharp",
+                "Color": "purple",
+                "Image": "cSharp.svg"        
+            },
+            {
+                "Type": "Skill",
+                "Label": "xUnit",
+                "Color": "darkcyan",
+                "Image": ""        
             }
         ]   
         }]
