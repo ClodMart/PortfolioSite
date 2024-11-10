@@ -11,8 +11,9 @@ export interface Card{
     Title?: string
     SubTitle?: string,
     Description?: string,
-    Items?: CardItem[]
-    Type: CardTypes
+    Items?: CardItem[],
+    Type: CardTypes,
+    Technical?: boolean
 }
 
 export interface CardItem{

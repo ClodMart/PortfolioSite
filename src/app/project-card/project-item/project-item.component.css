@@ -15,7 +15,7 @@ justify-content: flex-end;
         font-style: italic;
         font-weight:lighter;
         font-size:large;
-        color: white;
+        color: wheat;
         line-height: 2rem;
 }
 
@@ -66,4 +66,9 @@ background-position: 0 0;
 
 .nextItem{
     transform: translateY(-90%);
+}
+
+.divider{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
