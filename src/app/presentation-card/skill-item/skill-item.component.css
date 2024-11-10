@@ -1,32 +1,31 @@
 .itemContainer{
     display: flex;
     border: solid 1px black;
-    max-width: fit-content;
     flex-direction: row;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
     border-radius: 2rem;
     min-height: 40px;
-    min-width: 150px;
-    padding: 5px;
-    margin: 10px
+    min-width: 3rem;
+    padding: 0.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 .icon{
     width: auto;
     max-height: 40px;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 }
 
 .text{
     color: wheat;
-    font-size: 1.5vh;
+    font-size: 2vh;
     font-size-adjust: auto;
-    text-align: center;
+    text-align: start;
     line-height: 25px;
     height: 25px;
     margin-bottom: 0;
-    margin-left: 5px;
-    margin-right: 5px;
 }

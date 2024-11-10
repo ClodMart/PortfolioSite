@@ -92,7 +92,7 @@
         },
         {
             "Type": "Skill",
-            "Label": "Entity Fw",
+            "Label": "EntityFw",
             "Color": "darkorange", 
             "Image":"entity.svg",
             "Technical": true   
@@ -208,7 +208,7 @@
             },
             {
                 "Type": "Skill",
-                "Label": "Entity Fw",
+                "Label": "EntityFw",
                 "Color": "darkorange", 
                 "Image":"entity.svg", "Technical": true   
             }

@@ -14,11 +14,12 @@ justify-content: flex-end;
     min-width: 85%;
         font-style: italic;
         font-weight:lighter;
-        font-size:large;
+        font-size:medium;
         color: wheat;
         line-height: 2rem;
     .title{
         font-weight: bold;
+        font-size:large;
     }
 }
 
