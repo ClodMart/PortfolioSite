@@ -4,91 +4,105 @@
     "Cards":[{
         "TabName":"Presentation",
         "Title": "My History",
-        "Description": "I’m 27, in the IT consultancy field since 2019. During the first years of my career I worked on two projects for some of the most important clients for my company (Eniservizi and Kone elevators). In 2022 I chose to work for a production company and I got hired in Axiotek where I followed design, planning and development of the software embedded in the new generation of durometers. Since a web interface was needed, I started learning Angular to develop a web app. In order to get better with those new skills I decided to find a position as full stack developer, discovering Akkodis where I am currently employed.",
+        "Description": "Hello, my name is Claudio Martinoli, I am a developer since 2019. My carreer started when I got hired in Engineering first I managed a trouble ticketing software based in Java on Oracle database and then a dispatching software for emergency and scheduled technical calls for an elevator company using Java and sqlServer. After that my drive to always improve brought me to learn new tecnologies using C# landing me a job in axiotek where I built from scratch a WPF software needed to use the durometer they produced. While working on that I kept learning new things and started building angular web apps in my spare time. With my new skills I decided to become a full stack developer and got hired at Akkodis where I am currently working managing a software for risk evaluation sold to majour banks.",
         "Type": "Presentation",
         "Items": [{
             "Type": "Skill",
             "Label": "CSharp",
             "Color": "purple",
-            "Image": "cSharp.svg"        
+            "Image": "cSharp.svg",
+            "Technical": true     
         },
         {
             "Type": "Skill",
             "Label": "Angular",
             "Color": "cadetblue",
-            "Image": "Angular.svg"        
+            "Image": "Angular.svg",
+            "Technical": true          
         },
         {
             "Type": "Skill",
             "Label": "MAUI",
             "Color": "rebeccapurple",
-            "Image": "maui.svg"        
+            "Image": "maui.svg",
+            "Technical": true          
         },
         {
             "Type": "Skill",
             "Label": "SQL",
             "Color": "darkolivegreen",
-            "Image": "sql.svg"        
+            "Image": "sql.svg",
+            "Technical": true          
         },
         {
             "Type": "Skill",
             "Label": "ORACLE",
             "Color": "darkcyan",
-            "Image": "oracle.svg"        
+            "Image": "oracle.svg",
+            "Technical": true          
         },
         {
             "Type": "Skill",
             "Label": "html",
             "Color": "blue",
-            "Image": "html.svg"        
+            "Image": "html.svg",
+            "Technical": true          
         },
         {
             "Type": "Skill",
             "Label": "css",
             "Color": "darkorange",
-            "Image": "css.svg"        
+            "Image": "css.svg",
+            "Technical": true          
         },
         {
             "Type": "Skill",
             "Label": "WPF",
             "Color": "darkviolet", 
-            "Image":"wpf.svg" 
+            "Image":"wpf.svg",
+            "Technical": true   
         },
         {
             "Type": "Skill",
             "Label": "xaml",
             "Color": "darkslategrey", 
-            "Image":"xaml.svg" 
+            "Image":"xaml.svg",
+            "Technical": true   
         },
         {
             "Type": "Skill",
             "Label": "Json",
             "Color": "darkgreen", 
-            "Image":"json.svg" 
+            "Image":"json.svg",
+            "Technical": true  
         },
         {
             "Type": "Skill",
             "Label": "JavaScript",
             "Color": "darkslategrey", 
-            "Image":"javascript.svg" 
+            "Image":"javascript.svg",
+            "Technical": true   
         },
         {
             "Type": "Skill",
             "Label": "TypeScript",
             "Color": "darkcyan", 
-            "Image":"typescript.svg" 
+            "Image":"typescript.svg", 
+            "Technical": true  
         },
         {
             "Type": "Skill",
             "Label": "Entity Fw",
             "Color": "darkorange", 
-            "Image":"entity.svg" 
+            "Image":"entity.svg",
+            "Technical": true   
         },
         {
             "Type": "Skill",
             "Label": "xUnit",
             "Color": "darkcyan",
-            "Image": ""        
+            "Image": "",
+            "Technical": true         
         }
     ]
     },
@@ -107,31 +121,31 @@
                 "Type": "Skill",
                 "Label": "Angular",
                 "Color": "cadetblue",
-                "Image": "Angular.svg"        
+                "Image": "Angular.svg", "Technical": true          
             },        
             {
                 "Type": "Skill",
                 "Label": "TypeScript",
                 "Color": "darkcyan", 
-                "Image":"typescript.svg" 
+                "Image":"typescript.svg", "Technical": true   
             },       
             {
                 "Type": "Skill",
                 "Label": "html",
                 "Color": "blue",
-                "Image": "html.svg"        
+                "Image": "html.svg", "Technical": true          
             },
             {
                 "Type": "Skill",
                 "Label": "css",
                 "Color": "darkorange",
-                "Image": "css.svg"        
+                "Image": "css.svg", "Technical": true          
             },        
             {
                 "Type": "Skill",
                 "Label": "Json",
                 "Color": "darkgreen", 
-                "Image":"json.svg" 
+                "Image":"json.svg", "Technical": true   
             }
         ]   
         },
@@ -146,25 +160,25 @@
                 "Type": "Skill",
                 "Label": "CSharp",
                 "Color": "purple",
-                "Image": "cSharp.svg"        
+                "Image": "cSharp.svg", "Technical": true          
             },
             {
                 "Type": "Skill",
                 "Label": "WPF",
                 "Color": "darkviolet", 
-                "Image":"wpf.svg" 
+                "Image":"wpf.svg", "Technical": true   
             },
             {
                 "Type": "Skill",
                 "Label": "xaml",
                 "Color": "green", 
-                "Image":"xaml.svg" 
+                "Image":"xaml.svg", "Technical": true   
             },
             {
                 "Type": "Skill",
                 "Label": "Json",
                 "Color": "darkgreen", 
-                "Image":"json.svg" 
+                "Image":"json.svg", "Technical": true   
             }]   
         },
         {
@@ -178,31 +192,31 @@
                 "Type": "Skill",
                 "Label": "CSharp",
                 "Color": "purple",
-                "Image": "cSharp.svg"        
+                "Image": "cSharp.svg", "Technical": true          
             },
             {
                 "Type": "Skill",
                 "Label": "MAUI",
                 "Color": "rebeccapurple",
-                "Image": "maui.svg"        
+                "Image": "maui.svg", "Technical": true          
             },
             {
                 "Type": "Skill",
                 "Label": "SQL",
                 "Color": "darkred",
-                "Image": "sql.svg"        
+                "Image": "sql.svg", "Technical": true          
             },
             {
                 "Type": "Skill",
                 "Label": "Entity Fw",
                 "Color": "darkorange", 
-                "Image":"entity.svg" 
+                "Image":"entity.svg", "Technical": true   
             },
             {
                 "Type": "Skill",
                 "Label": "Json",
                 "Color": "darkgreen", 
-                "Image":"json.svg" 
+                "Image":"json.svg", "Technical": true   
             }
         ]   
         },
@@ -218,19 +232,20 @@
                 "Type": "Skill",
                 "Label": "Json",
                 "Color": "darkgreen", 
-                "Image":"json.svg" 
+                "Image":"json.svg", "Technical": true   
             },
             {
                 "Type": "Skill",
                 "Label": "CSharp",
                 "Color": "purple",
-                "Image": "cSharp.svg"        
+                "Image": "cSharp.svg", "Technical": true          
             },
             {
                 "Type": "Skill",
                 "Label": "xUnit",
                 "Color": "darkcyan",
-                "Image": ""        
+                "Image": "",
+                "Technical": true        
             }
         ]   
         }]
