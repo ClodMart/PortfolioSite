@@ -1,0 +1,77 @@
+.projectsContainer{
+display: flex;
+flex-grow: 1;
+max-width: 80%;
+justify-content: flex-end;
+}
+
+.projectsTitleContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    text-align: center;
+    flex-grow: 1;
+    min-width: 85%;
+        font-style: italic;
+        font-weight:lighter;
+        font-size:x-large;
+        color: wheat;
+        line-height: 2rem;
+    .title{
+        font-weight: bold;
+    }
+}
+
+.projectsImageContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    align-items: center;
+    scrollbar-width: none;
+}
+
+.image{
+    position: absolute;
+    width: 75vh;
+    height: 40vh;
+    border-radius: 2vh;
+    filter:drop-shadow(1mm -1mm 1mm black)
+}
+
+.skillsContainer{
+    height: auto;
+}
+
+.anim-bg-gradient {
+background: linear-gradient(120deg, rgb(139, 0, 86), darkmagenta, rgb(0, 47, 255));
+background-size: 200% 100%;
+background-position: 100% 0;
+transition: background-position .5s;
+border-radius: 10%;
+margin: 1rem;
+padding: 1rem;
+color: #ffffff;
+font-size: large;
+}
+
+.anim-bg-gradient:hover {
+background-position: 0 0;
+}
+
+.noDisp{
+    display: none;
+}
+
+.previousItem{
+    transform: translateY(90%);
+}
+
+.nextItem{
+    transform: translateY(-90%);
+}
+
+.divider{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}

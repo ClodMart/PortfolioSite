@@ -3,33 +3,59 @@
     <title>Claudio Martinoli Portfolio</title>
   </head>
   <body class="body">
-    <div id="Wrapper" class="homepage">
-      <header class="aParent">
+      <div class="header">
           <div id="container" class="avatarcontainer">
             <div class="avatar">
-              <img src="../assets/AvatarMaker.png" class="Avatar"/>
+              <img [src]="'../assets/mainPage/'+ListData().AvatarImg" class="Avatar"/>
             </div>
           </div>
-          <div class="TopLinks">
-            <p class="hover-underline-animation"> <a href="../assets/MartinoliCV2022.pdf" download="ClaudioMartinoliCV2022">My resume</a></p>
-            <p class="hover-underline-animation1"> Portfolio </p>
+          <div>
+            <p class="hover-underline-animation"> <a href="../assets/mainPage/" [download]="ListData().Curriculum">My resume</a></p>
           </div>
-      </header>
+        </div>
 
-      <div class="TitleBarStyle">
-        <h2>Welcome</h2><h3 [@slideUpDown]="TextStatus"> {{NamesArray[currentIndex]}}</h3><h3> !</h3>
-        <p>I am Claudio Martinoli;<br>
-          Solution designer,<br>
-          full stack developer and SQL expert.</p>
+
+      <div class="carusel-container">
+        <button aria-label="Previous Slide" class="caruselButton back"  (click)="onNavigate(slideDirections.left)">
+          <i class="material-icons">arrow_back_ios</i>
+        </button>
+        <div class="fullScreenContainer" >
+          <div class="cardContainer" *ngIf="0==selectedCard" [@slideInOut]="{
+            value: '',
+            params: {
+              start: slideDirection() === slideDirections.right ? '+' : '-',
+              end: slideDirection() === slideDirections.right ? '-' : '+'
+            }
+          }">
+          <app-welcome-card class="cardContent"></app-welcome-card>
+          </div>
+          <ng-container *ngFor="let info of ListData().Cards; index as i; trackBy: trackByFn" >
+            <div class="cardContainer" [ngSwitch]="info.Type" *ngIf="i+1==selectedCard" [@slideInOut]="{
+              value: '',
+              params: {
+                start: slideDirection() === slideDirections.right ? '+' : '-',
+                end: slideDirection() === slideDirections.right ? '-' : '+'
+              }
+            }">
+              <ng-template [ngSwitchCase]="personalInfoTypes.Presentation"  >
+                <app-presentation-card class="cardContent" [Card]="info"></app-presentation-card>
+              </ng-template>
+              <ng-template [ngSwitchCase]="personalInfoTypes.Project">
+                  <app-project-card class="cardContent" [Card]="info"></app-project-card>
+              </ng-template>
+            </div>
+          </ng-container>
+        </div>
+        <button aria-label="Forward Slide" class="caruselButton forward" (click)="onNavigate(slideDirections.right)">
+          <i class="material-icons">arrow_forward_ios</i>
+        </button>
       </div>
-
 
       <div class="BottomLinks">
-        <mat-divider class="divider" ></mat-divider>
+        <mat-divider class="divider"></mat-divider>
 
-        <p class="hover-underline-animation">Linkedin</p>
-        <p class="hover-underline-animation1">GitHub</p>
+        <p class="hover-underline-animation" (click)="OpenLinkedin()">Linkedin</p>
+        <!-- <p class="hover-underline-animation1">GitHub</p> -->
       </div>
-    </div>
   </body>
 </html>

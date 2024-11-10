@@ -1,39 +1,87 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition, keyframes, query, stagger } from '@angular/animations';
-import { interval } from 'rxjs';
-import { slideUpDown } from './animations';
+import { Component, computed, effect, OnDestroy, OnInit, Signal, signal, WritableSignal } from '@angular/core';
+import { slideInOut } from './animations';
+import { appConfig, ConfigsService } from './services/configuration.service';
+import { Subscription, take } from 'rxjs';
+import { CardTypes } from './enums/card-types.enum';
+import { horizontalDirections } from './enums/slide-directions.enum';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations:[animate('slideUpDown')]
+  animations:[
+    slideInOut
+  ]
 })
 
-export class AppComponent{
-  title = 'PortfolioSite';
-  public TextStatus = "Default";
+export class AppComponent implements OnDestroy{
 
-  public NamesArray: Array<string>=[
-    "everybody", "user", "world", "beautiful", "awesome"
-  ]
-  public currentIndex = 0;
-  public prevIndex = 0;
+  title = 'PortfolioSite';
+
   intervalId: any;
+  public selectedCard= 0;
+  public personalInfoTypes = CardTypes
+  public slideDirection = signal(horizontalDirections.right);
+  public slideDirections = horizontalDirections;
+
+  private appData: appConfig = {
+    LinkedinUrl:"",
+    Curriculum:"",
+    AvatarImg:"",
+    Cards:[]
+  };
+  public ListData: WritableSignal<appConfig> = signal(this.appData);
+  private subscription: Subscription;
+
+  constructor(public configsService: ConfigsService){
+    this.subscription=this.configsService.GetAppConfig().pipe(take(1)).subscribe(GitConf=>{
+      this.ListData?.set(GitConf); 
+    }
+    );
+  }
 
   ngOnInit() {
-    this.intervalId = setInterval(() => {
-      this.TextStatus="SecondoStato";
-        this.currentIndex = (this.currentIndex + 1) % this.NamesArray.length;
-      this.TextStatus="PrimoStato";
-        setTimeout(()=>{this.TextStatus = "Default";},500)
-    }, 2000);
+    
   }
 
    ngOnDestroy() {
+    this.subscription.unsubscribe();
      // Ferma l'intervallo quando il componente viene distrutto
      clearInterval(this.intervalId);
    }
+
+   public trackByFn(index: number, item: any) {
+    return item;
+ }
+
+ public async onNavigate(dir: horizontalDirections) {
+  this.slideDirection.set(dir);
+  var tempSelected =  this.selectedCard;
+  await new Promise(f => setTimeout(f, 1));
+  this.selectedCard = -1;
+  await new Promise(f => setTimeout(f, 300));
+    switch (dir) {
+      case 'left':
+        if (tempSelected === 0) {
+          this.selectedCard = this.ListData().Cards.length;
+        } else {
+          this.selectedCard = tempSelected -1;
+        }
+        break;
+      case 'right':
+        if (tempSelected === this.ListData().Cards.length) {
+          this.selectedCard = 0;
+        } else {
+          this.selectedCard = tempSelected + 1;
+        }
+    }
+  }
+
+  public OpenLinkedin() {
+    this.configsService.GetAppConfig().pipe(take(1)).subscribe(x=>{
+      window.open(x.LinkedinUrl, "_blank");
+    });
+  }
 }
 

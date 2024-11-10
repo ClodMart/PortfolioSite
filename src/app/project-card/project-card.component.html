@@ -1,0 +1,9 @@
+<div *ngIf="Card.Title" class="titleContainer">
+    <p>{{Card.Title}}</p>
+</div>
+<div *ngIf="Card.SubTitle" class="subTitleContainer">
+    <p>{{Card.SubTitle}}</p>
+</div>
+<div class="mainContainer">
+        <app-project-item class="container" [items]="Card.Items ?? []"></app-project-item>
+</div>        
