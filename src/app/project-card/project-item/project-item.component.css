@@ -14,11 +14,12 @@ justify-content: flex-end;
     min-width: 85%;
         font-style: italic;
         font-weight:lighter;
-        font-size:x-large;
+        font-size:medium;
         color: wheat;
         line-height: 2rem;
     .title{
         font-weight: bold;
+        font-size:large;
     }
 }
 
@@ -40,7 +41,9 @@ justify-content: flex-end;
 }
 
 .skillsContainer{
-    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
 
 .anim-bg-gradient {
@@ -69,9 +72,4 @@ background-position: 0 0;
 
 .nextItem{
     transform: translateY(-90%);
-}
-
-.divider{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
 }

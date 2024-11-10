@@ -20,7 +20,7 @@
 
     <div #ProjectSelector class="projectsImageContainer" (wheel)="changeSelected($event)" (click)="changeSelectedClick($event)">
     <ng-container *ngFor="let item of items; index as i; trackBy: trackByFn">
-        <img #project *ngIf="item && i>=selected()" [src]="'../assets/projectImages/' + (i==selected() ? item.Image : 'emptyCard.jpg')" class="image" [@slideUpInOut]="{
+        <img #project *ngIf="item && i>=selected()" rel="stylesheet" [src]="'./assets/projectImages/' + (i==selected() ? item.Image : 'emptyCard.jpg')" class="image" [@slideUpInOut]="{
             value: '',
             params: {
               start : '+',

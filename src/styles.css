@@ -83,8 +83,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       font-style: italic;
       font-weight:lighter;
       font-size:x-large;
+      line-height: normal;
       color: wheat;
-      line-height: 3rem;
       text-wrap: wrap;
 }
 
