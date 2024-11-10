@@ -75,14 +75,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .descContainer{
   display: flex;
   flex-grow: 1;
-  text-align: center;
-  margin-right: 1rem;
+  text-align: left;
+  margin-right: 5rem;
   max-width: 60%;
   /* width: 50rem;
   height: 20rem; */
       font-style: italic;
       font-weight:lighter;
-      font-size:large;
+      font-size:x-large;
       color: wheat;
       line-height: 3rem;
       text-wrap: wrap;
