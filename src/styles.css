@@ -86,6 +86,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       line-height: normal;
       color: wheat;
       text-wrap: wrap;
+      max-height: 8rem;
 }
 
 .skillsContainer{
