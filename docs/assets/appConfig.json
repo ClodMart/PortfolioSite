@@ -92,7 +92,7 @@
         },
         {
             "Type": "Skill",
-            "Label": "Entity Fw",
+            "Label": "EntityFw",
             "Color": "darkorange", 
             "Image":"entity.svg",
             "Technical": true   
@@ -184,7 +184,7 @@
         {
             "Type": "Project",
             "Label": "Storage Manager",
-            "Description": "A storage manager destinated to resturant or pubs. The software manages items that are inserted in the storage and products that are sold by the activity, calculating costs, prices and net gains highlighting if prices are increasing or decreasing based on the data inserted by the user. It can also generate xls files containing orders needed in order to fill the storage based on settings inserted by the user. The software is cross platform thanks to MAUI and adapts to device theme colors",
+            "Description": "A cross platform storage manager destinated to resturant or pubs. The software manages items that are inserted in the storage and products that are sold by the activity, calculating costs, prices and net gains. It can also generate xls files containing orders needed in order to fill the storage based on settings inserted by the user.",
             "Color": "green",
             "Image":"StorageManager.png",
             "Url":"https://github.com/ClodMart/StorageManager" ,  
@@ -208,15 +208,9 @@
             },
             {
                 "Type": "Skill",
-                "Label": "Entity Fw",
+                "Label": "EntityFw",
                 "Color": "darkorange", 
                 "Image":"entity.svg", "Technical": true   
-            },
-            {
-                "Type": "Skill",
-                "Label": "Json",
-                "Color": "darkgreen", 
-                "Image":"json.svg", "Technical": true   
             }
         ]   
         },
