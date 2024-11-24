@@ -5,7 +5,6 @@ import { Subscription, take } from 'rxjs';
 import { CardTypes } from './enums/card-types.enum';
 import { horizontalDirections } from './enums/slide-directions.enum';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -37,12 +36,7 @@ export class AppComponent implements OnDestroy{
   constructor(public configsService: ConfigsService){
     this.subscription=this.configsService.GetAppConfig().pipe(take(1)).subscribe(GitConf=>{
       this.ListData?.set(GitConf); 
-    }
-    );
-  }
-
-  ngOnInit() {
-    
+    });
   }
 
    ngOnDestroy() {
@@ -81,6 +75,12 @@ export class AppComponent implements OnDestroy{
   public OpenLinkedin() {
     this.configsService.GetAppConfig().pipe(take(1)).subscribe(x=>{
       window.open(x.LinkedinUrl, "_blank");
+    });
+  }
+
+  public openCurriculum(){
+    this.configsService.GetAppConfig().pipe(take(1)).subscribe(x=>{
+      window.open("./assets/mainPage/" + this.ListData().Curriculum, "_blank");
     });
   }
 }
