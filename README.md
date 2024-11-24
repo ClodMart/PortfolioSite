@@ -13,6 +13,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To perform a build that can be read from github pages run `ng build --output-path docs --base-href ./PortfolioSite`
 
 ## Running unit tests
 
