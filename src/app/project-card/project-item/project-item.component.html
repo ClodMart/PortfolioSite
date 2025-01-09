@@ -1,21 +1,19 @@
+ 
 <div class="projectsContainer">
     <div *ngIf="items[selected()] && !changing" class="projectsTitleContainer" [@slideInOutFixed]="{
         value: '',
         params: {
           start: '+'
         }
-      }">
-            <p class="title">{{items[selected()].Label}}</p> 
+      }">   <p class="title">{{items[selected()].Label}}</p>        
             <p>{{items[selected()].Description}}</p>
             <mat-divider class="divider"></mat-divider>
-        <div>
             <div class="skillsContainer">
                 <ng-container *ngFor="let item of items[selected()].SubItems; index as i; trackBy: trackByFn" [ngSwitch]="item.Type">
                     <app-skill-item *ngSwitchCase="itemTypes.Skill" [item]="item"></app-skill-item>
                 </ng-container>
             </div>
                 <button class="anim-bg-gradient"  (click)="navigateToPage()">Repository</button>        
-        </div>
     </div>
 
     <div #ProjectSelector class="projectsImageContainer" (wheel)="changeSelected($event)" (click)="changeSelectedClick($event)">
@@ -27,10 +25,28 @@
               end:'+'
             }
           }"
-          [style.top]="23-(2*i)+'%'"
-          [style.left]="50+i+'%'"
+          [style.top]="20-(2*i)+'vh'"
+          [style.left]="45+i+'vw'"
           [style.z-index]="items.length - i"
           />
     </ng-container>
+    </div>
+</div>
+<div class="projectsContainerMobile" (click)="changeSelectedClick($event)">
+    <div *ngIf="items[selected()] && !changing" class="projectsTitleContainer" [@slideUpInOut]="{
+        value: '',
+        params: {
+              start : '+',
+              end:'+'
+            }
+      }">   <p class="title">{{items[selected()].Label}}</p>        
+            <p>{{items[selected()].Description}}</p>
+            <mat-divider class="divider"></mat-divider>
+            <div class="skillsContainer">
+                <ng-container *ngFor="let item of items[selected()].SubItems; index as i; trackBy: trackByFn" [ngSwitch]="item.Type">
+                    <app-skill-item *ngSwitchCase="itemTypes.Skill" [item]="item"></app-skill-item>
+                </ng-container>
+            </div>
+                <button class="anim-bg-gradient"  (click)="navigateToPage()">Repository</button>        
     </div>
 </div>

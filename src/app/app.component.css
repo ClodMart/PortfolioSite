@@ -1,6 +1,8 @@
 body,
 html {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -50,25 +52,18 @@ html {
   }
 }
 
-.avatarcontainer {
-  width: 10rem;
-  height: 10rem;
-  
-}
-
 .avatar
 {
+  display: flex;
   box-sizing: border-box;
   border: 5px wheat solid;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-  transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
   align-self: center;
 }
-.avatar img { width: 100%; height: auto; 
-  transform: scale(1.25,1.25);}
+.avatar img { width: 8vw; height: auto; }
 /*#endregion AvatarEffects*/
 
 
@@ -89,29 +84,11 @@ html {
   align-items: center;
   max-height: 10rem;
   margin: 2.5rem;
+  padding-left: 10vh;
+  padding-right: 10vh;
 }
 
-.carusel-container{
-  flex-grow: 1;
-  max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
 
-.caruselButton{
-height: 100%;
-width: 10%;
-background: transparent;
-border: none;
-align-content: center;
->.material-icons{
-  transform: scale(4);
-  color: gray ;
-}
-}
 .caruselButton:hover{
   backdrop-filter: blur(80px);
   filter: drop-shadow(0 0 0.75rem crimson);
@@ -129,3 +106,18 @@ align-content: center;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 5rem; 
 }
+
+@media screen and (max-width: 1606px),
+      screen and  (max-height: 813px) {
+        .avatar img { width: auto; height: 15vh;}
+
+        .header{
+          display: flex;
+          flex-grow: 1;
+          justify-content: space-between;
+          align-items: space-between;
+          max-height: 10vh;
+          padding-left: 0vh;
+          padding-right: 0vh;
+        }
+      }

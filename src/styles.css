@@ -6,20 +6,61 @@ body {
 
 /*Rimuove il bordo di approot */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body,
+html {
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgb(26, 188, 156);
+  background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+  background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
 
+body{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  background-size:cover;
+  background-image: linear-gradient(159deg, #000000, #010432, #000fdb, #500085, #6d08af, #9b05ff);
+  background-size: 400% 400%;
+  animation: gradient 7s ease infinite;
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+  
+  @keyframes gradient {
+  0% {
+  background-position: 0% 50%;
+  }
+  50% {
+  background-position: 100% 50%;
+  }
+  100% {
+  background-position: 0% 50%;
+  }
+  }
+
+  .fullScreenComp{
+    min-height: 100vh;
+    min-width: 100vw;
+  }
 
 .fullScreenContainer{
   display: flex;
   overflow: scroll;
   scrollbar-width: none;
-  width: 100%;
-  margin: 1rem;
+  width: 100vw;
+  height: 60vh;
   backdrop-filter: blur(50px);
+  flex-grow: 1;
   >.cardContainer{   
-    border: solid, 5px, black;
-    border-radius: 2rem; 
+    border: solid 0.5vw black;
+    border-radius: 2vw; 
     display: flex;
     flex-grow: 1;
     overflow: hidden;
@@ -28,9 +69,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       display: flex;
       flex-grow: 1;
       flex-direction: column;
-      padding: 2.5rem;
-      /* width: 95rem;
-      margin: 2rem; */
+      padding: 2.5vw;
+      height: 45vh;
+      /* width: 95vw;
+      margin: 2vw; */
     }
   }
 }
@@ -41,6 +83,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   flex-grow: 1;
   justify-content: stretch;
   align-items: stretch;
+  height: 45vh;
 }
 
 .titleContainer{
@@ -50,7 +93,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   align-content: center;
   text-align: center;
   max-height: 10%;
-  margin-bottom: 2rem;
   >p{
       font-style: italic;
       font-weight:bold;
@@ -75,14 +117,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .descContainer{
   display: flex;
   flex-grow: 1;
-  text-align: left;
-  margin-right: 5rem;
-  max-width: 60%;
-  /* width: 50rem;
-  height: 20rem; */
+  text-align: left; margin-right: 5vw;
+  margin-top: 5vh;
+  max-width: 40vw;
+  height: 45vh;
       font-style: italic;
       font-weight:lighter;
-      font-size:x-large;
+      font-size:large;
       line-height: normal;
       color: wheat;
       text-wrap: wrap;
@@ -144,3 +185,85 @@ text-decoration: none;
   transform-origin: bottom left;
 }
 /*#endregion hover-underline_Effects*/
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5vw;
+}
+
+.caruselButton{
+  width: 10%;
+  background: transparent;
+  border: none;
+  align-content: center;
+  >.material-icons{
+    transform: scale(4);
+    color: gray ;
+  }
+  }
+
+  .carusel-container{
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+/* Example media query for smaller screens */
+@media screen and (max-width: 1606px),
+      screen and  (max-height: 813px) {
+
+  .fullScreenContainer{
+    display: flex;
+    overflow: scroll;
+    scrollbar-width: none;
+    width: 100vw;
+    height: 75vh;
+  }
+  .cardContainer {
+      flex-direction: column;
+      overflow: scroll;
+  }
+  .caruselButton{
+    >.material-icons{
+      transform: scale(1);
+    }
+  }
+
+  .carusel-container{
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 75vh;
+  }
+
+  .descContainer {
+    margin-top: 0;
+    max-width: none;
+    min-height: fit-content;
+    text-align: center;
+  }
+
+  .cardContainer .cardContent {
+    overflow: scroll;
+      padding: 5vw;
+  }
+
+  .mainContainer{
+    flex-direction: column;
+  }
+
+  .skillsTitleContainer p {
+    font-size: 4vw; /* Adjusted for smaller screens */
+    line-height: 8vw; /* Adjusted for smaller screens */
+}
+
+.skillsContainer {
+  gap: 1vh ;
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+}
+}

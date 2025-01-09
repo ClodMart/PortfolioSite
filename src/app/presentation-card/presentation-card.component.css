@@ -1,14 +1,14 @@
-.skillsTitleContainer{
+.skillsTitleContainer {
     text-align: center;
-    >p{
-        font-style: italic;
-        font-weight:bold;
-        font-size: x-large;
-        color: wheat;
-        line-height: 2rem;
-      }
-      .skillsContainer{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
+}
+
+.skillsTitleContainer p {
+    font-style: italic;
+    font-weight: bold;
+    font-size: xx-large; /* Changed to viewport width */
+    color: wheat;
+}
+
+.skillsContainer{
+  margin-top: 5vh;
 }

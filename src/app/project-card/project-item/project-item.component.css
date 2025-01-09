@@ -1,50 +1,48 @@
 .projectsContainer{
 display: flex;
+justify-items: space-between;
 flex-grow: 1;
-max-width: 80%;
-justify-content: flex-end;
+}
+.projectsContainerMobile{
+    display: none;
 }
 
 .projectsTitleContainer{
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
+    color: wheat;
+    max-width: 40vw;
+    align-items: center;
+    margin-right: 5vh;
+}
+
+.title{
     text-align: center;
-    flex-grow: 1;
-    min-width: 85%;
-        font-style: italic;
-        font-weight:lighter;
-        font-size:medium;
-        color: wheat;
-        line-height: 2rem;
-    .title{
-        font-weight: bold;
-        font-size:large;
-    }
+    font-weight: bolder;
+    font-size:large;
+    font-style: italic;
+    font-size:x-large;
+    color: wheat;
+    line-height: 2rem;
 }
 
 .projectsImageContainer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 50%;
-    align-items: center;
-    scrollbar-width: none;
-}
+    width: 55vh;
+    height: 30vh;
+    }
 
 .image{
     position: absolute;
-    width: 75vh;
-    height: 40vh;
+    width: 55vh;
+    height: 30vh;
     border-radius: 2vh;
     filter:drop-shadow(1mm -1mm 1mm black)
 }
 
 .skillsContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-}
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+} 
 
 .anim-bg-gradient {
 background: linear-gradient(120deg, rgb(139, 0, 86), darkmagenta, rgb(0, 47, 255));
@@ -72,4 +70,38 @@ background-position: 0 0;
 
 .nextItem{
     transform: translateY(-90%);
+}
+
+@media screen and (max-width: 1606px),
+      screen and  (max-height: 813px) {  
+
+        .image{
+            display: none;
+        }
+        .projectsContainer{
+            flex-direction: column-reverse;
+            display: none;
+            }
+
+            .projectsContainerMobile{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .projectsTitleContainer{
+                max-width: unset;
+            }
+            @media screen and (max-width: 768px) {
+                .skillsContainer{
+                    grid-template-columns: 1fr 1fr; 
+                } 
+                
+            }
+
+            @media screen and (max-width: 500px) {
+                .skillsContainer{
+                    grid-template-columns: 1fr; 
+                } 
+                
+            }
 }
