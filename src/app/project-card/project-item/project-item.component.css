@@ -15,6 +15,9 @@ flex-grow: 1;
     max-width: 40vw;
     align-items: center;
     margin-right: 5vh;
+    >p{
+        text-align: justify;
+      }
 }
 
 .title{

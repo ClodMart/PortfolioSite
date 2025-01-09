@@ -131,6 +131,9 @@ body{
       color: wheat;
       text-wrap: wrap;
       max-height: 8rem;
+      >p{
+        text-align: justify;
+      }
 }
 
 .skillsContainer{
