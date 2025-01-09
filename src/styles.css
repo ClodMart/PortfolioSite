@@ -59,18 +59,21 @@ body{
   backdrop-filter: blur(50px);
   flex-grow: 1;
   >.cardContainer{   
-    border: solid 0.5vw black;
+    border: solid 0.2vw rgba(121, 121, 121,.2);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     border-radius: 2vw; 
     display: flex;
     flex-grow: 1;
     overflow: hidden;
-    justify-content: stretch;
+    justify-content: center;
+    align-content: center;
     >.cardContent{      
       display: flex;
       flex-grow: 1;
       flex-direction: column;
       padding: 2.5vw;
-      height: 45vh;
+      justify-content: center;
       /* width: 95vw;
       margin: 2vw; */
     }
@@ -227,6 +230,7 @@ text-decoration: none;
   .cardContainer {
       flex-direction: column;
       overflow: scroll;
+      scrollbar-width: none;
   }
   .caruselButton{
     >.material-icons{
@@ -238,7 +242,7 @@ text-decoration: none;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    height: 75vh;
+    
   }
 
   .descContainer {

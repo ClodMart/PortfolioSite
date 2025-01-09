@@ -1,51 +1,31 @@
 .TitleBarStyle{
     position: relative;
-    /* top:25%;
-    left: 25%;
-    height: 25rem;
-    width: 95rem; */
+    font-style: italic;
+    font-weight:lighter;
+    font-size:7vh;
+    color: wheat;
+    line-height: 8vh;
+    text-wrap: wrap;
+    text-align: center;
+    >p, h2, h3{
+      font-style: italic;
+      font-weight:lighter;
+      font-size:2vw;
+      color: wheat;
+      line-height: 8vw;
+    }
+    h2{
+      font-size: 4vw;
+    }
 }
-.TitleBarStyle p
-{
-  font-style: italic;
-  font-weight:lighter;
-  font-size:7vh;
-  color: wheat;
-  line-height: 8vh;
-  width: 95vw;
-}
-
-.TitleBarStyle h2
- {
-  display: inline;
-  font-style: italic;
-  font-weight:lighter;
-  font-size:7vh;
-  color: wheat;
-  line-height: 8vh;
-  width: 95vh;
-}
-
 
 @media screen and (max-width: 1320px){  
-  .TitleBarStyle p
-{
-  font-style: italic;
-  font-weight:lighter;
-  font-size:5vw;
-  color: wheat;
-  line-height: 8vw;
-  width: 95vw;
+  .TitleBarStyle{
+    >p, h3{
+          font-size:2.5vh;
+    }
+    >h2{
+      font-size: 3.5vh;
+    }
+  }
 }
-
-.TitleBarStyle h2
- {
-  display: inline;
-  font-style: italic;
-  font-weight:lighter;
-  font-size:5vw;
-  color: wheat;
-  line-height: 8vw;
-  width: 95vh;
-}
-      }

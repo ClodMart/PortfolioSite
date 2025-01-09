@@ -7,9 +7,7 @@ import { slideUpDown } from '../animations';
   imports: [],
   templateUrl: './welcome-card.component.html',
   styleUrl: './welcome-card.component.css',
-  animations:[
-    slideUpDown
-  ]
+  animations:[]
 })
 export class WelcomeCardComponent implements OnInit{
   ngOnInit(): void {
