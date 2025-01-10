@@ -17,12 +17,15 @@ flex-grow: 1;
     margin-right: 5vh;
     >p{
         text-align: justify;
+        font-size: 3vh;
+        font-weight: lighter;
+        font-style: italic;
       }
 }
 
 .title{
     text-align: center;
-    font-weight: bolder;
+    font-weight: bolder !important;
     font-size:large;
     font-style: italic;
     font-size:x-large;
@@ -95,7 +98,9 @@ background-position: 0 0;
                 max-width: unset;
                 margin-right: unset;
                 >p{
+                    font-size: 6vw;
                     text-align: justify;
+                    line-height: 7vw;
                   }
             }
             @media screen and (max-width: 768px) {
