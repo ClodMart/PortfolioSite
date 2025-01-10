@@ -75,7 +75,7 @@ background-position: 0 0;
     transform: translateY(-90%);
 }
 
-@media screen and (max-width: 1300px),
+@media screen and (max-width: 1200px),
       screen and  (max-height: 400px) {  
 
         .image{
