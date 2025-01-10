@@ -75,8 +75,8 @@ background-position: 0 0;
     transform: translateY(-90%);
 }
 
-@media screen and (max-width: 1606px),
-      screen and  (max-height: 813px) {  
+@media screen and (max-width: 1300px),
+      screen and  (max-height: 600px) {  
 
         .image{
             display: none;
@@ -93,6 +93,10 @@ background-position: 0 0;
 
             .projectsTitleContainer{
                 max-width: unset;
+                margin-right: unset;
+                >p{
+                    text-align: justify;
+                  }
             }
             @media screen and (max-width: 768px) {
                 .skillsContainer{

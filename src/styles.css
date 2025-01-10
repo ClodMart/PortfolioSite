@@ -220,8 +220,8 @@ text-decoration: none;
   }
 
 /* Example media query for smaller screens */
-@media screen and (max-width: 1606px),
-      screen and  (max-height: 813px) {
+@media screen and (max-width: 1300px),
+      screen and  (max-height: 600px) {
 
   .fullScreenContainer{
     display: flex;
@@ -253,11 +253,15 @@ text-decoration: none;
     max-width: none;
     min-height: fit-content;
     text-align: center;
+    margin-right: 0vw;
+    >p{
+      text-align: justify;
+    }
   }
 
   .cardContainer .cardContent {
     overflow: scroll;
-      padding: 5vw;
+      scrollbar-width: 0px;
   }
 
   .mainContainer{

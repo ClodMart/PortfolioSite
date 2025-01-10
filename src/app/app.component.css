@@ -106,8 +106,8 @@ html {
   border-top-right-radius: 5rem; 
 }
 
-@media screen and (max-width: 1606px),
-      screen and  (max-height: 813px) {
+@media screen and (max-width: 1300px),
+      screen and  (max-height: 600px) {
         .avatar img { width: auto; height: 15vh;}
 
         .header{
