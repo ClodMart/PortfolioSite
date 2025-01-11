@@ -55,6 +55,7 @@ export interface CircleProgressOptionsInterface {
     responsive?: boolean;
     startFromZero?: boolean;
     showZeroOuterStroke?: boolean;
+    showSpokenLabel?: boolean;
     lazy?: boolean;
 }
 
@@ -111,6 +112,7 @@ export class CircleProgressOptions implements CircleProgressOptionsInterface {
     responsive = false;
     startFromZero = true;
     showZeroOuterStroke = true;
+    showSpokenLabel = false;
     lazy = false;
 }
 
@@ -207,6 +209,37 @@ export class CircleProgressOptions implements CircleProgressOptionsInterface {
                     </ng-container>
                 </text>
             </g>
+
+            <g transform="translate(0,-50)">
+                <text *ngIf="options.showSpokenLabel"
+                    alignment-baseline="baseline"
+                    [attr.x]="svg.circle.cx"
+                    [attr.y]="svg.circle.cy"
+                    [attr.text-anchor]="svg.title.textAnchor">
+                    <ng-container *ngIf="options.showTitle">
+                        <tspan *ngFor="let tspan of svg.title.tspans"
+                            [attr.x]="svg.title.x"
+                            [attr.y]="svg.title.y"
+                            [attr.dy]="tspan.dy"
+                            [attr.font-size]="svg.title.fontSize"
+                            [attr.font-weight]="svg.title.fontWeight"
+                            [attr.fill]="svg.title.color">Spoken</tspan>
+                    </ng-container>
+                    <tspan *ngIf="options.showUnits"
+                        [attr.font-size]="svg.units.fontSize"
+                        [attr.font-weight]="svg.units.fontWeight"
+                        [attr.fill]="svg.units.color">{{svg.units.text}}</tspan>
+                    <ng-container *ngIf="options.showSubtitle">
+                        <tspan *ngFor="let tspan of svg.subtitle.tspans"
+                            [attr.x]="svg.subtitle.x"
+                            [attr.y]="svg.subtitle.y"
+                            [attr.dy]="tspan.dy"
+                            [attr.font-size]="svg.subtitle.fontSize"
+                            [attr.font-weight]="svg.subtitle.fontWeight"
+                            [attr.fill]="svg.subtitle.color">{{tspan.span}}</tspan>
+                    </ng-container>
+                </text>
+            </g>
             </ng-container>
         </svg>
     `
@@ -276,6 +309,7 @@ export class CircleProgressComponent implements OnChanges, OnInit, OnDestroy {
   @Input() responsive?: boolean;
   @Input() startFromZero?: boolean;
   @Input() showZeroOuterStroke?: boolean;
+  @Input() showSpokenLabel?: boolean;
 
   @Input() lazy?: boolean;
 

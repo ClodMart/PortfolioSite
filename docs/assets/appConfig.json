@@ -211,35 +211,19 @@
         },
         {
             "Type": "SoftSkill",
-            "Label": "English",
-            "Description": "Spoken",
-            "Color": ["#023e8a","#48cae4"],
-            "Image":"English.svg",
-            "Level": 80 
-        },
-        {
-            "Type": "SoftSkill",
-            "Label": "English",
-            "Description": "Written",
-            "Color": ["#023e8a","#48cae4"],
-            "Image":"English.svg",
-            "Level": 80
-        },
-        {
-            "Type": "SoftSkill",
             "Label": "Italian",
-            "Description": "Spoken",
-            "Color": ["#74c69d","#1b4332"],
-            "Image":"Italian.svg",
-            "Level": 100 
-        },
-        {
-            "Type": "SoftSkill",
-            "Label": "English",
             "Description": "Written",
             "Color": ["#74c69d","#1b4332"],
             "Image":"Italian.svg",
             "Level": 100
+        },
+        {
+            "Type": "SoftSkill",
+            "Label": "English",
+            "Description": "Written",
+            "Color": ["#48cae4","#023e8a"],
+            "Image":"English.svg",
+            "Level": 80
         }
     ]
     },
