@@ -1,0 +1,22 @@
+<circle-progress
+  [imageSrc]="'./assets/softSkillIcons/' + item.Image"
+  [imageHeight]="70"
+  [imageWidth]="100"
+  [title]="item.Description"
+  [percent]="item.Level"
+  [radius]="100"
+  [units]="''"
+  [outerStrokeWidth]="8"
+  [innerStrokeWidth]="8"
+  [outerStrokeColor]="outerColor"
+  [innerStrokeColor]="innerColor"
+  [animation]="true"
+  [animationDuration]="300"
+  [showImage]="true"
+  [showTitle]="true"
+  [showSubtitle]="true"
+  [backgroundColor]="'black'"
+  [subtitleFormat]="formatSubtitle"
+  [animateTitle]="false"
+  [responsive]="true">
+</circle-progress>

@@ -19,7 +19,7 @@ flex-grow: 1;
         text-align: justify;
         font-size: 2.5vh;
         font-weight: lighter;
-        font-style: italic;
+        font-style: normal;
       }
 }
 
@@ -27,7 +27,7 @@ flex-grow: 1;
     text-align: center;
     font-weight: bolder !important;
     font-size:large;
-    font-style: italic;
+    font-style: normal;
     font-size:x-large;
     color: wheat;
     line-height: 2rem;

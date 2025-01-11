@@ -1,6 +1,6 @@
 .TitleBarStyle{
     position: relative;
-    font-style: italic;
+    font-style: normal;
     font-weight:lighter;
     font-size:7vh;
     color: wheat;
@@ -8,7 +8,7 @@
     text-wrap: wrap;
     text-align: center;
     >p, h2, h3{
-      font-style: italic;
+      font-style: normal;
       font-weight:lighter;
       font-size:2vw;
       color: wheat;

@@ -18,7 +18,7 @@ export class SkillItemComponent implements OnInit {
   }
   ngOnInit(): void {
     if(this.item.Color){
-      this.style = {"background-color": this.item.Color}
+      this.style = {"background-color": this.item.Color as string}
     }
   }
 }

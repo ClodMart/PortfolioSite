@@ -1,0 +1,30 @@
+.softSkill{
+    max-height: 20vh;
+    height: 20vh;
+}
+.mainContainer{
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.softSkillsContainer{
+    min-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.skillsTitleContainer{
+    display: flex;
+}
+
+@media screen and (max-width: 1200px),
+      screen and  (max-height: 400px) {
+        .mainContainer{
+            flex-direction: column;
+        }
+
+        .softSkillsContainer{
+            margin-bottom: 5vh;
+        }
+        }

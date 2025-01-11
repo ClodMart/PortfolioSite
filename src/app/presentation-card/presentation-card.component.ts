@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Card } from '../services/configuration.service';
 import { CommonModule } from '@angular/common';
-import { SkillItemComponent } from './skill-item/skill-item.component';
+import { SkillItemComponent } from '../common/skill-item/skill-item.component';
 import { CardItemTypes } from '../enums/card-item-types.enum';
 
 @Component({

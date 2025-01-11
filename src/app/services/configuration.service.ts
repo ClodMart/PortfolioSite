@@ -19,7 +19,7 @@ export interface Card{
 export interface CardItem{
   Label: string,
   Description?: string,
-  Color?: string,
+  Color?: string[] | string,
   Level?: number,
   Url?: string,
   Image?: string,

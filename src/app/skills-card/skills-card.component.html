@@ -1,0 +1,21 @@
+<div *ngIf="Card.Title" class="titleContainer">
+    <p>{{Card.Title}}</p>
+</div>
+<div *ngIf="Card.SubTitle" class="subTitleContainer">
+    <p>{{Card.SubTitle}}</p>
+</div>
+<div class="mainContainer">
+    <div *ngIf="Card.Items" class="skillsTitleContainer">
+        <div class="softSkillsContainer">
+        <ng-container *ngFor="let item of Card.Items; index as i; trackBy: trackByFn" [ngSwitch]="item.Type">
+            <app-soft-skill-item class="softSkill" *ngSwitchCase="itemTypes.SoftSkill" [item]="item"></app-soft-skill-item>
+        </ng-container>
+    </div>           
+    </div>
+    <div *ngIf="Card.Items" class="skillsTitleContainer">
+    <div class="skillsContainer">
+        <ng-container *ngFor="let item of Card.Items; index as i; trackBy: trackByFn" [ngSwitch]="item.Type">
+            <app-skill-item *ngSwitchCase="itemTypes.Skill" [item]="item"></app-skill-item>
+        </ng-container>
+    </div>  
+</div>

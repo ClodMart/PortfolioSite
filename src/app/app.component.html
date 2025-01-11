@@ -36,6 +36,9 @@
               <ng-template [ngSwitchCase]="personalInfoTypes.Project">
                   <app-project-card class="cardContent" [Card]="info"></app-project-card>
               </ng-template>
+              <ng-template [ngSwitchCase]="personalInfoTypes.Skills">
+                <app-skills-card class="cardContent" [Card]="info"></app-skills-card>
+            </ng-template>
             </div>
           </ng-container>
         </div>

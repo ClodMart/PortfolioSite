@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, EventEmitter, Input, Output, signal, viewChild, ViewChild, ViewChildren } from '@angular/core';
 import { CardItem } from 'src/app/services/configuration.service';
-import { SkillItemComponent } from "../../presentation-card/skill-item/skill-item.component";
+import { SkillItemComponent } from "../../common/skill-item/skill-item.component";
 import { CardItemTypes } from 'src/app/enums/card-item-types.enum';
 import { MatDividerModule } from '@angular/material/divider';
 import { slideInOutFixed, slideUpInOut } from 'src/app/animations';

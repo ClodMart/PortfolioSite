@@ -10,6 +10,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { PresentationCardComponent } from "./presentation-card/presentation-card.component";
 import { ProjectCardComponent } from "./project-card/project-card.component";
 import { WelcomeCardComponent } from "./welcome-card/welcome-card.component";
+import { SkillsCardComponent } from "./skills-card/skills-card.component";
+import { NgCircleProgressModule } from 'projects/ng-circle-progress/src/lib/ng-circle-progress.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { WelcomeCardComponent } from "./welcome-card/welcome-card.component";
     NoopAnimationsModule,
     PresentationCardComponent,
     ProjectCardComponent,
-    WelcomeCardComponent
+    WelcomeCardComponent,
+    SkillsCardComponent,
+    NgCircleProgressModule.forRoot(),
 ],
   providers: [provideHttpClient(withFetch()), provideAnimations()],
   bootstrap: [AppComponent]
