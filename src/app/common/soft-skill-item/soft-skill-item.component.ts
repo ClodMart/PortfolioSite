@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, Renderer2 } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardItem } from 'src/app/services/configuration.service';
 import { NgCircleProgressModule } from "../../../../projects/ng-circle-progress/src/lib/ng-circle-progress.module";
 
@@ -19,7 +19,7 @@ export class SoftSkillItemComponent {
   public style: Object;
 
 
-  constructor(private renderer: Renderer2){
+  constructor(){
    this.style = {};
   }
   ngOnInit(): void {
@@ -32,9 +32,6 @@ export class SoftSkillItemComponent {
       this.innerColor = colorArr[1];
       this.outerColor = colorArr[0];
     }
-
-    this.svgElement = this.renderer.createElement(this.item.Image ?? "", 'path');
-    this.svgElement.setAttribute('label', this.item.Label);
   }
 
   formatSubtitle = (percent: number) : string => {
