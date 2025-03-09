@@ -4,11 +4,9 @@ import { CircleProgressComponent, CircleProgressOptionsInterface, CircleProgress
 
 
 @NgModule({
-  declarations: [CircleProgressComponent],
   imports: [
     CommonModule
-  ],
-  exports: [CircleProgressComponent]
+  ]
 })
 export class NgCircleProgressModule {
   static forRoot(options: CircleProgressOptionsInterface = {}): ModuleWithProviders<NgCircleProgressModule> {

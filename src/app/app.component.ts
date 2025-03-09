@@ -6,12 +6,13 @@ import { CardTypes } from './enums/card-types.enum';
 import { horizontalDirections } from './enums/slide-directions.enum';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations:[
-    slideInOut
-  ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    animations: [
+        slideInOut
+    ],
+    standalone: false
 })
 
 export class AppComponent implements OnDestroy{

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, Output, OnInit, OnDestroy, ElementRef, SimpleChanges, NgZone, Injector } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { Subscription, timer } from 'rxjs';
 
 export interface CircleProgressOptionsInterface {
@@ -242,7 +242,8 @@ export class CircleProgressOptions implements CircleProgressOptionsInterface {
             </g>
             </ng-container>
         </svg>
-    `
+    `,
+    imports: [CommonModule],
 })
 export class CircleProgressComponent implements OnChanges, OnInit, OnDestroy {
  @Output() onClick = new EventEmitter<MouseEvent>();

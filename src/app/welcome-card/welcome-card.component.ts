@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { slideUpDown } from '../animations';
 
 @Component({
-  selector: 'app-welcome-card',
-  standalone: true,
-  imports: [],
-  templateUrl: './welcome-card.component.html',
-  styleUrl: './welcome-card.component.css',
-  animations:[]
+    selector: 'app-welcome-card',
+    imports: [],
+    templateUrl: './welcome-card.component.html',
+    styleUrl: './welcome-card.component.css',
+    animations: []
 })
 export class WelcomeCardComponent implements OnInit{
   ngOnInit(): void {

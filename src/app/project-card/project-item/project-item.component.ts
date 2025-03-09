@@ -8,12 +8,11 @@ import { slideInOutFixed, slideUpInOut } from 'src/app/animations';
 import { transition } from '@angular/animations';
 
 @Component({
-  selector: 'app-project-item',
-  standalone: true,
-  imports: [CommonModule, SkillItemComponent, MatDividerModule],
-  animations:[slideInOutFixed, slideUpInOut],
-  templateUrl: './project-item.component.html',
-  styleUrl: './project-item.component.css'
+    selector: 'app-project-item',
+    imports: [CommonModule, SkillItemComponent, MatDividerModule],
+    animations: [slideInOutFixed, slideUpInOut],
+    templateUrl: './project-item.component.html',
+    styleUrl: './project-item.component.css'
 })
 export class ProjectItemComponent {
 

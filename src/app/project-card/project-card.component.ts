@@ -5,11 +5,10 @@ import { Card } from '../services/configuration.service';
 import { ProjectItemComponent } from "./project-item/project-item.component";
 
 @Component({
-  selector: 'app-project-card',
-  standalone: true,
-  imports: [CommonModule, ProjectItemComponent],
-  templateUrl: './project-card.component.html',
-  styleUrl: './project-card.component.css'
+    selector: 'app-project-card',
+    imports: [CommonModule, ProjectItemComponent],
+    templateUrl: './project-card.component.html',
+    styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
 

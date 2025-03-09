@@ -6,11 +6,10 @@ import { CardItemTypes } from '../enums/card-item-types.enum';
 import { SoftSkillItemComponent } from '../common/soft-skill-item/soft-skill-item.component';
 
 @Component({
-  selector: 'app-skills-card',
-  standalone: true,
-  imports: [CommonModule, SkillItemComponent,SoftSkillItemComponent],
-  templateUrl: './skills-card.component.html',
-  styleUrl: './skills-card.component.css'
+    selector: 'app-skills-card',
+    imports: [CommonModule, SkillItemComponent, SoftSkillItemComponent],
+    templateUrl: './skills-card.component.html',
+    styleUrl: './skills-card.component.css'
 })
 export class SkillsCardComponent {
   @Input() public Card!: Card

@@ -3,11 +3,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CardItem } from 'src/app/services/configuration.service';
 
 @Component({
-  selector: 'app-skill-item',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './skill-item.component.html',
-  styleUrl: './skill-item.component.css'
+    selector: 'app-skill-item',
+    imports: [CommonModule],
+    templateUrl: './skill-item.component.html',
+    styleUrl: './skill-item.component.css'
 })
 export class SkillItemComponent implements OnInit {
 

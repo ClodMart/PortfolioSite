@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { CardItem } from 'src/app/services/configuration.service';
-import { NgCircleProgressModule } from "../../../../projects/ng-circle-progress/src/lib/ng-circle-progress.module";
+import { CircleProgressComponent } from 'projects/ng-circle-progress/src/public-api';
 
 @Component({
-  selector: 'app-soft-skill-item',
-  standalone: true,
-  imports: [CommonModule, NgCircleProgressModule],
-  templateUrl: './soft-skill-item.component.html',
-  styleUrl: './soft-skill-item.component.css'
+    selector: 'app-soft-skill-item',
+    imports: [CommonModule, CircleProgressComponent],
+    templateUrl: './soft-skill-item.component.html',
+    styleUrl: './soft-skill-item.component.css'
 })
 export class SoftSkillItemComponent {
   @Input() public item!: CardItem
