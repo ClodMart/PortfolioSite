@@ -20,7 +20,7 @@ jobs:
       run: npm run build-pages
     - name: Deploy to gh pages
       run: |
-        npx angular-cli-ghpages --dir=docs/browser
+        npx angular-cli-main --dir=docs/browser
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
